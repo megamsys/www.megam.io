@@ -1,328 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="img/favicon.ico" />
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" href="fonts/font.css" type="text/css">
+<link rel="stylesheet" href="css/graph.css" type="text/css">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<title>Megam :: Meglytics</title>
+<script src="js/modernizr.js"></script> 
+<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Megam Systems</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/modern.css" rel="stylesheet" /> 
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-		<link rel="shortcut icon" href="img/favicon.ico"> 
-               <link rel="stylesheet" type="text/css" href="css/style2.css" />
-		<script type="text/javascript" src="js/modernizr.custom.28468.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=Economica:700,400italic' rel='stylesheet' type='text/css'>
-		<noscript>
-			<link rel="stylesheet" type="text/css" href="css/nojs.css" />
-		</noscript>
-
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-fixed-top" role="navigation" style="padding-top:10px;padding-bottom:10px;background-color:#F5F5F5;">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html"><img src="img/logo.png"></a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right" style="font-size: 20px;">
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="cloud_management_portal.html">Cloud Management Portal</a>
-                            </li>
-                            <li>
-                                <a href="cloud_in_a_box.html">Cloud In a Box</a>
-                            </li>
-                            <li>
-                                <a href="meglytics.html">Meglytics</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="http://docs.megam.io/docs" target="_blank">Documentation</a>
-                    </li>
-                    <li>
-                        <a href="http://docs.megam.io/blog" target="_blank">Developer Hub</a>
-                    </li>
-                   <li>
-                        <a href="http://www.gomegam.com/blog" target="_blank">Blog</a>
-                    </li>
-                    <li>
-                        <a href="team.html">Team/Contact</a>
-                    </li>
-
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+<!-- Static navbar -->
+<div class="header-menu-inner">
+  <nav class="inner-page navbar navbar-default  navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="img-responsive"></a> </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown active"><a href="#" class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"> Products <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="cloud-in-a-box.html">Cloud In a Box</a></li>
+               <li role="presentation"><a role="menuitem" tabindex="-1" href="cloud-management-platform.html">Cloud Management Platform</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="meglytics.html"class="login" style="background: none; border: none;border-radius: none; color: #333; font-weight: normal;margin-top: 0px;    padding: 3px 20px;" >Meglytics</a></li>
+            </ul>
+          </li>
+          <li><a href="http://docs.megam.io" target="_blank">Documentation </a></li>
+          <li><a href="http://devcenter.megam.io" target="_blank">Dev Center</a></li>
+          <li><a href="https://www.megam.co" target="_blank">Try Megam</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse --> 
+    </div>
+  </nav>
+  <div id="graph" class="banner-text-innerpage">
+    <h2>Meglytics</h2>
+    <p class="inner-pragraph">Analyze data and identify patterns, so as to predict "what will happen next".
+</p>
+  </div>
+  <div class="container cloud-box">
+    <div class="col-md-12 row ">
+      <div class="col-md-3 col-sm-3 left_arrow" data-scrollreveal="enter left but wait 0.5s">
+        <div class="arrow_box">
+          <h1 class="logo"  >First step, Insert the Ready to go USB, in a server in your data center</h1>
         </div>
-        <!-- /.container -->
-    </nav>
+      </div>
+      <div class="col-md-6 col-sm-6" data-scrollreveal="enter top but wait 0.8s"> <img src="img/inner-banner.png" class="img-responsive"> </div>
+      <div class="col-md-3 col-sm-3 right_arrow" data-scrollreveal="enter right but wait 1.0s">
+        <div class="arrow_box1">
+          <h1 class="logo">In just a few clicks, from the WebUI, your data center is ready with HA, <a href="http://docs.megam.io/v1.0/docs/megam_cloudinabox_planning" target="_blank";>Read More</a></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class=" container">
+<div class="col-md-12 row about-us">
+<h2>Customer Segmentation</h2>
+<div class="col-md-6 col-sm-6 ">
+<h3> With mushrooming customer acquisition costs, it has become more important to target promotions and fix pricing, increase profitability effectively. 
 
-<br/>
-<br/>
+
+ </h3>
+<P>To deal with all the data they needed and the pressure to increase profitability any retail company can use our proof of concept Meglytics Visualizer to correlate purchase history, profile information and products catalog in figuring out a pattern of customers buying behaviour.
+</P>
+</div>
+<div class="col-md-6 col-sm-6  about-right">
+<P>The same product can be provided at different price. Segment different customers, by predicting customer buying behaviour willingness to pay. Explore Price sensitivity on customers willing to pay a higher pay and in effect impact on customers lost ratio to profitability.
+
+</P>
+</div>
+</div>
+</div>
+<div class="megletics">
+<h3>Meglytics Visualizer</h3>
+<div class="container">
+  <div class="row ">
+  
   <div class="container">
-        <div class="row text-center">
-		<h2 class="featurette-heading">Meglytics</h2>
-	</div>
-	<br/>
-	 <div class="row text-center">
-		<p class="lead">Analyze data and identify patterns, so as to predict "what will happen next".
-</p>
-	</div>
-        <div class="row text-center featurette">
-		 <div class="col-md-2 clearfix visible-md-block visible-lg-block"></div>	
-		 <div class="col-md-8 text-center">
-			<img class="featurette-image img-responsive" src="img/Meg.png">
-		</div>
-		<div class="col-md-2 clearfix visible-md-block visible-lg-block"></div>
-	</div>
-	<div class="row text-left">
-		<h2 class="featurette-heading">Customer Segmentation</h2>
-	</div>
-	<br/>
-	 <div class="row text-left">
-		<p class="lead">With mushrooming customer acquisition costs, it has become more important to target promotions and fix pricing, increase profitability effectively. To deal with all the data they needed and the pressure to increase profitability any retail company can use our proof of concept Meglytics Visualizer to correlate purchase history, profile information and products catalog in figuring out a pattern of customers buying behaviour.
-</p>
-	</div>
-<div class="row text-left">
-		<p class="lead">The same product can be provided  at different price. Segment different customers, by predicting customer buying behaviour willingness to pay. Explore Price sensitivity on customers willing to pay a higher pay and in effect impact on customers lost ratio to profitability.
-</p>
-	</div>
-	
+    <div class="col-md-6 col-sm-6">
+      <h2>Recommendation Engine </h2>
+      <p>Identify the best offers to send to a customer using collaborative filtering. In Retail if a customer buys laptop the customer might be interested in a mouse..</p>
+    </div>
+    <div class="col-md-6 col-sm-6"> <img src="img/graph2.png" class="img-responsive"> </div>
+  </div>
+  
+    <div class="col-md-6 col-sm-6"> <img src="img/graph1.png"class="img-responsive"> </div>
+    <div class="col-md-6 col-sm-6">
+      <h2>Market Basket Analysis</h2>
+      <p>Identify product affinities with and across segments easily. A customers often purchase shampoo and conditioner together, so putting both items on promotion at the same time would not create a significant increase in revenue.</p>
+    </div>
+  </div>
+</div>
 
-	<div class="row text-left">
-		<h2 class="featurette-heading">Features</h2>
-	</div>
-	<br/>
-	 <div class="row text-left">
-		<ul>
-		<li>
-			<p><h3><b>Market Basket Analysis</b>: Identify product affinities with and across segments easily</h3></p>
-		</li>
-		<li>
-			<p><h3><b>Churn Prediction</b>: Identify customers with probability to churn and target them with relevant offers to improve retention</h3></p>
-		</li>
-		<li>
-			<p><h3><b>Campaign propensity</b>: Make your campaigns more efficient both in terms of budget and effectiveness</h3></p>
-		</li>
-		<li>
-			<p><h3><b>Recommendation Engine</b>: Identify the best offers to send to a customer using collaborative filtering</h3></p>
-		</li>
-		</ul>
-	</div>
-	<br/>
-        <div class="row text-center featurette">
-		 <div class="col-md-2 clearfix visible-md-block visible-lg-block"></div>	
-		 <div class="col-md-8 text-center">
-			<img class="featurette-image img-responsive" src="img/varai1.png">
-		</div>
-		<div class="col-md-2 clearfix visible-md-block visible-lg-block"></div>
-	</div>	
+  <div class="container">
+  
+    <div class="col-md-6 col-sm-6">
+      <h2>Churn Prediction</h2>
+      <p>Identify customers with probability to churn and target them with relevant offers to improve retention. The ability to predict that a particular customer is at a high risk of churning, while there is still time to do something about it, represents a huge additional potential revenue source.</p>
+    </div>
+    <div class="col-md-6 col-sm-6"> <img src="img/graph2.png" class="img-responsive"> </div>
+  </div>
 
-	<div class="row text-left">
-		<h2 class="featurette-heading">We found more uses for machine learning </h2>
-	</div>
-	<br/>
-	 <div class="row text-left">
-		<ul>
-		<li>
-			<p><h3>The power to access and analyze enormous datasets can improve our ability to anticipate and treat illnesses.</h3></p>
-		</li>
-		<li>
-			<p><h3>Detect from the patient age, and tumour size if this can be cancer  ?</h3></p>
-		</li>
-		<li>
-			<p><h3>Predict anomalies from the sentiment in social media </h3></p>
-		</li>
-		<li>
-			<p><h3>Optimum dynamic workload. Predict application hot factor at any instant based on historic data and port the app to another VM.  </h3></p>
-		</li>
-		</ul>
-	</div>
-	<br/>
-        <!-- /.row -->
-	</div>
+</div>
+<div class="learning">
+<div class="container">
+<h2>More usage</h2>
+<ul>
+<h4><strong>Health care</strong></h4>
+<li>The power to access and analyze enormous datasets can improve our ability to anticipate and treat illnesses.</li>
+<li>Detect from the patient age, and tumour size if this can be cancer ?</li>
+<h4><strong>Energy</strong></h4>
+<li>Predict anomalies from the sentiment in social media</li>
+<h4><strong>Cloud</strong></h4>
+<li>Optimum dynamic workload. Predict application hot factor at any instant based on historic data and port the app to another VM.</li>
+</ul>
+</div>
+</div>
 
-         <!-- Footer -->
-      <footer>
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-		    <div class="footer-col col-md-2 clearfix visible-md-block visible-lg-block"></div>		   	    
-                    <div class="footer-col col-md-2 links">
-			<div> 
-                         	<ul class="unstyled address ">
-                    			<li>
-                        			About
-                   		 	</li>
-                    			<li>
-                       				<a href="team.html">Team</a>
-                    			</li>
-					<li>
-                        			<a href="contact.html">Contact us</a>
-                   		 	</li>
-                    		</ul>  	
-			</div>
-		   </div>
-		   <div class="footer-col col-md-2 links">
-			   <div>		
-                		<ul class="unstyled address">
-                    			<li>
-                        			Products
-                   		 	</li>
-                            <li>
-                                <a href="cloud_management_portal.html">Cloud Management Portal</a>
-                            </li>
-                            <li>
-                                <a href="cloud_in_a_box.html">Cloud In a Box</a>
-                            </li>
-                            <li>
-                                <a href="meglytics.html">Meglytics</a>
-                            </li>
-                		</ul>  
-			  </div>		
-                   </div>
-		   <div class="footer-col col-md-2 links">
-			   <div>		
-                		<ul class="unstyled address">
-					<li>
-                        			Community
-                   		 	</li>
-                    			<li>
-						<a href="http://www.gomegam.com/blog" target="_blank">Blog</a>
-                    			</li>
-					<li>
-                        			<a href="http://docs.megam.io/docs" target="_blank">Documentation</a>
-                   		 	</li>
-                    			<li>
-						<a href="http://docs.megam.io/blog" target="_blank">Dev center</a>
-                    			</li>
-					<li>
-						<a href="http://docs.megam.io/v1.0/discuss" target="_blank">Support</a>
-                    			</li>
-                		</ul>  
-			  </div>		
-                   </div>
-		   <div class="footer-col col-md-2 links">
-			   <div>		
-                		<ul class="unstyled address">
-					<li>
-                        			<a href="#">Partners</a>
-                   		 	</li>                    			
-                		</ul>  
-			  </div>		
-                   </div>
-		  <div class="footer-col col-md-2 clearfix visible-md-block visible-lg-block"></div> 
-		</div>	
-		<div class="row">
-		   <div class="footer-col col-md-2 clearfix visible-md-block visible-lg-block"></div>
-		   <div class="footer-col col-md-4 address">
-			<ul class="unstyled address">
-                    		<li>
-                        		<img src="img/logo.png">
-                   		 </li>
-                    		 <li>
- 					Plot No. 53, Second Cross, Radha nagar, <br/>Perumbakkam, <br/>Chennai-600100, <br/>India
-                       			<br/>Contact us : info@megam.io
-                    		</li>
-			</ul>
-		    </div> 
-		   <div class="footer-col col-md-4">
-			<ul class="unstyled social">
-      		     		<li>
-                        		<ul class="list-inline">
-                            			<li>
-                                			<a href="https://www.facebook.com/megamsys" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                            			</li>
-                            			<li>
-                                			<a href="https://github.com/megamsys/" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-github-alt"></i></a>
-                            			</li>
-                            			<li>
-                                			<a href="https://twitter.com/megamsys" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                            			</li>
-                            			<li>
-                                			<a href="https://www.linkedin.com/in/kishorekumarneelamegam" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                            			</li>
-                        		</ul>
-                    		</li>                    		
-                	</ul>                        
-                    </div>
-		     <div class="footer-col col-md-2 clearfix visible-md-block visible-lg-block"></div>               
-                </div> 
-		<div class="row">
-		    <div class="footer-col col-md-2 clearfix visible-md-block visible-lg-block"></div>	
-			<div class="footer-col col-md-8  text-center">
-			   <hr/>
-			   Copyright&copy;2015 by Megam. All rights reserved.
-			</div>
-		    <div class="footer-col col-md-2 clearfix visible-md-block visible-lg-block"></div>	
-		</div>	
-		             
+<div class="container support">
+  <h2>Got you back, always! 24x7 support. 1-800-618-6813 and support@megam.io</h2>
+  <a href="https://www.megam.co" target="_blank">Try Megam</a> </div>
+<footer>
+  <div class="container subscribe">
+    <!--<div class="row col-md-12">
+      <div class="col-md-4 col-sm-6 col-md-offset-1">
+        <div class="row">
+          <h2>Sign-up to our newsletter</h2>
+        </div>
+      </div>
+      <div class="col-md-5 col-sm-6">
+        <div class="row">
+          <form class=" form-group">
+            <div class="col-md-6 col-sm-7 row">
+              <input type="email" placeholder="Email address" class="form-control subscribe-input" id="inputEmail">
             </div>
-        
-    </footer>
-
-<!--/Footer-->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Script to Activate the Carousel -->
-    <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-    </script>
-
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery.cslider.js"></script>
-		<script type="text/javascript">
-			$(function() {
-			
-				$('#da-slider').cslider({
-					autoplay	: true,
-					bgincrement	: 450
-				});
-			
-			});
-		</script>	
-
+            <div class="col-md-6 col-sm-7 row">
+              <input type="submit" value="Subscribe" name="Subscribe" class="subscribe-btn">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>-->
+  </div>
+  <div class="container footer-bottom">
+    <div class="row col-md-12">
+      <div class="col-md-3 col-sm-3 footer-menu">
+        <div class="row">
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html">Team</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="https://www.megam.co" target="_blank">Try Megam</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-3 footer-menu">
+        <div class="row">
+          <ul>
+            <li><a href="cloud-management-platform.html">Cloud Management Platform</a></li>
+            <li><a href="cloud-in-a-box.html">Cloud In a Box</a></li>
+            <li><a href="meglytics.html">Meglytics</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-3 footer-menu">
+        <div class="row">
+          <ul>
+            <li><a href="http://gomegam.com/blog" target="_blank">Blog</a></li>
+            <li><a href="http://docs.megam.io" target="_blank">Documentation</a></li>
+            <li><a href="http://devcenter.megam.io" target="_blank">Dev center</a></li>
+            <li><a href="http://docs.megam.io/v1.0/discuss" target="_blank">Support</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-3 social-menu">
+        <div class="row"> <img src="img/logo.png" class="img-responsive">
+          <ul>
+            <li><a href="https://github.com/megamsys" target="_blank" class="github"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://facebook.com/megamsys" target="_blank" class="facebook"><i class="fa fa-facebook"></i> </a></li>
+            <li><a href="https://twitter.com/megamsys" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://plus.google.com/105742854503471299978/about" target="_blank" class="gplus"><i class="fa fa-google-plus"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container ">
+    <div class="copy-right">
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <p> © Megam 2015  All rights reserved.</p>
+        </div>
+        <div class="col-md-4 col-sm-6 col-md-offset-2">
+          <p>Designed with love by <a href="http://enixel.com" target="_blank"> Enixel Digital Agency</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/jquery.js" type="text/javascript"></script> 
+<script src="js/bootstrap.min.js"></script>
+<script src="js/title.js"></script> 
 </body>
-
 </html>
