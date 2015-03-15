@@ -2256,7 +2256,7 @@ th {
   border-top: 1px solid #e8e8e8;
 }
 .table > thead > tr > th {
-  vertical-align: bottom;
+  vertical-align: bottom; font-weight:normal;
   
 }
 .table > caption + thead > tr:first-child > th,
