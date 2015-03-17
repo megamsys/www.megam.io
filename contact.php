@@ -33,16 +33,16 @@
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="img-responsive"></a> </div>
+        <a class="navbar-brand" href="index"><img src="img/logo.png" class="img-responsive"></a> </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
+          <li class="active"><a href="index">Home</a></li>
+          <li><a href="about">About</a></li>
           <li class="dropdown"><a href="#" class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"> Products <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="cloud-in-a-box.html">Cloud In a Box</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="cloud-management-platform.html" class="login">Cloud Management Platform</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="meglytics.html"class="login" style="background: none; border: none;border-radius: none; color: #333; font-weight: normal;margin-top: 0px;    padding: 3px 20px;" >Meglytics</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="cloud-in-a-box">Cloud In a Box</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="cloud-management-platform">Cloud Management Platform</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="meglytics" class="login" style="background: none; border: none;border-radius: none; color: #333; font-weight: normal;margin-top: 0px;    padding: 3px 20px;" >Meglytics</a></li>
             </ul>
           </li>
           <li><a href="http://docs.megam.io" target="_blank">Documentation </a></li>
@@ -50,7 +50,7 @@
           <li><a href="https://www.megam.co" target="_blank">Try Megam</a></li>
         </ul>
       </div>
-      <!--/.nav-collapse -->
+      <!--/.nav-collapse --> 
     </div>
   </nav>
 </div>
@@ -68,37 +68,40 @@
         <ul>
           <li><i class="fa fa-home"></i>Megam Systems (India)</li>
           <li><i class="fa fa-map-marker"></i>Plot no.53, Door No. 2/1075, Second cross, Radha nagar, Perumbakkam, Chennai 100</li>
-          <li><i class="fa fa-phone-square"></i>+91-98405-59300</li>
-          <li><i class="fa fa-phone-square"></i>US/Canada : 1-800-618-6813</li>
+          <li><i class="fa fa-phone-square"></i>91-98405-59300</li>
           <li><i class="fa fa-envelope-o"></i><a href="mailto:info@megam.io">info@megam.io</a></li>
         </ul>
       </div>
-      <!--<div class="col-md-6 col-sm-6">
+      <div class="col-md-6 col-sm-6">
         <ul>
-          <li><i class="fa fa-home"></i>Megam Systems (Canada)</li>
-          <li> <i class="fa fa-phone-square"></i>613-834-4518</li>
+          <li><i class="fa fa-home"></i>Megam Systems (US/Canada)</li>
+          <!--<li><i class="fa fa-map-marker"></i>1806 Arrowgrass way, Ottawa K4A 0c7, Ontario Canada</li>-->
+          <li> <i class="fa fa-phone-square"></i>1-800-618-6813</li>
         </ul>
-      </div>-->
+      </div>
     </div>
     <div class="col-md-5 col-sm-6 row">
       <h2>Contact</h2>
-      <form action="MAILTO:someone@example.com" method="post" enctype="text/plain">
-        <div class="form-group col-md-12 ">
-          <input type="text" class="form-control" id="name" placeholder="Name">
+      <div id="contact_form" class="form-style" >
+        <div id="contact_results"></div>
+        <div id="contact_body">
+          <div class="form-group col-md-12 ">
+            <input type="text" class="form-control" id="name" name="name" required="true" placeholder="Name">
+          </div>
+          <div class="form-group col-md-6 ">
+            <input type="email" class="form-control" id="email" name="email" required="true" placeholder="Email">
+          </div>
+          <div class="form-group col-md-6 ">
+            <input type="text" class="form-control" id="phone2" name="phone2" required="true" placeholder="Phone Number">
+          </div>
+          <div class="form-group col-md-12 ">
+            <textarea class="form-control" rows="3" name="message" required="true" placeholder="Message"></textarea>
+          </div>
+          <div class="form-group col-md-12 ">
+            <input class="btn btn-default send col-md-4 col-md-offset-8" type="submit" id="submit_btn" name="submit" value="Send">
+          </div>
         </div>
-        <div class="form-group col-md-6 ">
-          <input type="email" class="form-control" id="email" placeholder="Email">
-        </div>
-        <div class="form-group col-md-6 ">
-          <input type="text" class="form-control" id="subject" placeholder="Subject">
-        </div>
-        <div class="form-group col-md-12 ">
-          <textarea class="form-control" rows="3" id="message" placeholder="Message"></textarea>
-        </div>
-        <div class="form-group col-md-12 ">
-          <button type="submit" id="sendEmail" class="btn btn-default send col-md-4 col-md-offset-8">Send</button>
-        </div>
-      </form>
+      </div>
     </div>
   </div>
 </div>
@@ -107,7 +110,7 @@
   <h2>Got you back, always! 24x7 support. 1-800-618-6813 and support@megam.io</h2>
   <a href="https://www.megam.co" target="_blank">Try Megam</a> </div>
 <footer>
-  <div class="container subscribe">
+  <div class="container subscribe"> 
     <!--<div class="row col-md-12">
       <div class="col-md-4 col-sm-6 col-md-offset-1">
         <div class="row">
@@ -126,45 +129,44 @@
           </form>
         </div>
       </div>
-    </div>-->
+    </div>--> 
   </div>
   <div class="container footer-bottom">
     <div class="row col-md-12">
       <div class="col-md-3 col-sm-3 footer-menu">
         <div class="row">
-         <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="about.html">Team</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-
-            <li><a href="https://www.megam.co" target="_blan            <li><a href="partners.html">Partners</a></li>
-            k">Try Megam</a></li>
+          <ul>
+            <li><a href="about">About Company</a></li>
+            <li><a href="about">Team</a></li>
+            <li><a href="contact.php">Contact Us</a></li>
+             <li><a href="partners">Partners</a></li>
+            <li><a href="https://www.megam.co" target="_blank">Try Megam</a></li>
           </ul>
         </div>
       </div>
       <div class="col-md-3 col-sm-3 footer-menu">
         <div class="row">
           <ul>
-            <li><a href="cloud-management-platform.html">Cloud Management Platform</a></li>
-            <li><a href="cloud-in-a-box.html">Cloud In a Box</a></li>
-            <li><a href="meglytics.html">Meglytics</a></li>
+            <li><a href="cloud-management-platform">Cloud Management Portal</a></li>
+            <li><a href="cloud-in-a-box">Cloud In a Box</a></li>
+            <li><a href="meglytics">Meglytics</a></li>
           </ul>
         </div>
       </div>
       <div class="col-md-3 col-sm-3 footer-menu">
         <div class="row">
           <ul>
-            <li><a href="http://blog.megam.io" target="_blank">Blog</a></li>
-            <li><a href="http://docs.megam.io" target="_blank">Documentation</a></li>
-            <li><a href="http://devcenter.megam.io" target="_blank">Dev center</a></li>
-            <li><a href="http://docs.megam.io/v1.0/discuss" target="_blank">Support</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="docs.megam.io">Documentation</a></li>
+            <li><a href="devcenter.megam.io">Dev center</a></li>
+            <li><a href="contact.php">Support</a></li>
           </ul>
         </div>
       </div>
       <div class="col-md-3 col-sm-3 social-menu">
         <div class="row"> <img src="img/logo.png" class="img-responsive">
           <ul>
-            <li><a href="https://github.com/megamsys" target="_blank" class="github"><i class="fa fa-github"></i></a></li>
+           <li><a href="https://github.com/megamsys" target="_blank" class="github"><i class="fa fa-github"></i></a></li>
             <li><a href="https://facebook.com/megamsys" target="_blank" class="facebook"><i class="fa fa-facebook"></i> </a></li>
             <li><a href="https://twitter.com/megamsys" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></li>
             <li><a href="https://plus.google.com/105742854503471299978/about" target="_blank" class="gplus"><i class="fa fa-google-plus"></i></a></li>
@@ -186,9 +188,8 @@
     </div>
   </div>
 </footer>
-<script src="js/jquery.js" type="text/javascript"></script>
-<!--<script src="js/mandrill.js" type="text/javascript"></script>-->
-<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.js" type="text/javascript"></script> 
+<script src="js/bootstrap.min.js"></script> 
 <script>
       function initialize() {
   var styles = [
@@ -224,7 +225,7 @@ scrollwheel: false,
     zoomControl: true,
 zoomControlOptions: {
   style: google.maps.ZoomControlStyle.LARGE,
-
+  
 },
     mapTypeControlOptions: {
       mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
@@ -232,7 +233,7 @@ zoomControlOptions: {
   };
   var map = new google.maps.Map(document.getElementById('map_canvas'),
     mapOptions);
-
+    
 	// new google.maps.Marker({ position: new google.maps.LatLng(50.920351, 6.968679), map: map});
 
   map.mapTypes.set('map_style', styledMap);
@@ -240,8 +241,8 @@ zoomControlOptions: {
 
         var image = 'img/marker.png';
 
-
-
+      
+        
         var marker = new google.maps.Marker({
           map: map,
           animation: google.maps.Animation.DROP,
@@ -249,7 +250,7 @@ zoomControlOptions: {
           position: new google.maps.LatLng(12.908768, 80.195775)
         });
         var infowindow = new google.maps.InfoWindow();
-
+       
         google.maps.event.addListener(marker, 'click', function() {
             infowindow.open(map, marker);
         });
@@ -258,18 +259,59 @@ zoomControlOptions: {
       }
 
       google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+    </script> 
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#submit_btn").click(function() { 
+       
+	    var proceed = true;
+        //simple validation at client's end
+        //loop through each field and we simply change border color to red for invalid fields		
+		$("#contact_form input[required=true], #contact_form textarea[required=true]").each(function(){
+			$(this).css('border-color',''); 
+			if(!$.trim($(this).val())){ //if this field is empty 
+				$(this).css('border-color','red'); //change border color to red   
+				proceed = false; //set do not proceed flag
+			}
+			//check invalid email
+			var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/; 
+			if($(this).attr("type")=="email" && !email_reg.test($.trim($(this).val()))){
+				$(this).css('border-color','red'); //change border color to red   
+				proceed = false; //set do not proceed flag				
+			}	
+		});
+       
+        if(proceed) //everything looks good! proceed...
+        {
+			//get input field values data to be sent to server
+            post_data = {
+				'user_name'		: $('input[name=name]').val(), 
+				'user_email'	: $('input[name=email]').val(), 
+				'phone_number'	: $('input[name=phone2]').val(), 
+				'msg'			: $('textarea[name=message]').val()
+			};
+            
+            //Ajax post data to server
+            $.post('contact_me.php', post_data, function(response){  
+				if(response.type == 'error'){ //load json data from server and output message     
+					output = '<div class="error">'+response.text+'</div>';
+				}else{
+				    output = '<div class="success">'+response.text+'</div>';
+					//reset values in all input fields
+					$("#contact_form  input[required=true], #contact_form textarea[required=true]").val(''); 
+					$("#contact_form #contact_body").slideUp(); //hide form after success
+				}
+				$("#contact_form #contact_results").hide()(output).slideDown();
+            }, 'json');
+        }
+    });
+    
+    //reset previously set border colors and hide all message on .keyup()
+    $("#contact_form  input[required=true], #contact_form textarea[required=true]").keyup(function() { 
+        $(this).css('border-color',''); 
+        $("#result").slideUp();
+    });
+});
+</script>
 </body>
 </html>
-
-
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-60777472-1', 'auto');
-ga('send', 'pageview');
-
-</script>

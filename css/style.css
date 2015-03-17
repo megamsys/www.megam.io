@@ -1030,3 +1030,56 @@ footer {
     content: "• ";
     color: #7f8dc4; font-size:26px;
 }
+#contact_form .success{
+	background: #D8FFC0;
+	padding: 5px 10px 5px 10px;
+	margin: 0px 0px 5px 0px;
+	border: none;
+	font-weight: bold;
+	color: #2E6800;
+	border-left: 3px solid #2E6800;
+}
+#contact_form .error {
+	background: #FFE8E8;
+	padding: 5px 10px 5px 10px;
+	margin: 0px 0px 5px 0px;
+	border: none;
+	font-weight: bold;
+	color: #FF0000;
+	border-left: 3px solid #FF0000;
+}
+.partners {
+	padding-top:50px;
+	padding-bottom:50px; border-bottom: 1px solid #e8e8e8;
+}
+.partners h2 {
+	color:#66719b;
+	font-size:30px;
+	margin-top:10px; padding-bottom:25px;
+	margin-bottom:10px; text-align:center; border-bottom: 1px solid #e8e8e8;
+}
+.partners-logo img{ margin-left: auto; margin-right:auto; display:block;}
+.partners-logo h3{ color: #2c2c2c;
+    font-size: 24px;
+	padding-top:30px; 
+	padding-bottom:10px; margin-top:0px;  margin-bottom:0px;  text-align:center;}
+.partners-logo h1{ color: #818181;
+    font-size: 16px;
+	margin-top:0px; 
+	margin-bottom:0px; padding-bottom:10px; text-align:center; font-weight:bold;}
+
+.partners-logo p{ color: #818181;
+    font-size: 16px;
+	margin-top:0px;
+	margin-bottom:0px;  padding-bottom:10px; text-align:center;}
+.partners-logo {
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+    display: block;
+    line-height: 1.42857; margin-top:20px;
+    margin-bottom: 20px;
+    padding: 4px;
+    transition: border 0.2s ease-in-out 0s;
+}
+.partners-logo:hover{ background:#c1c9eb ;  border: 1px solid #c1c9eb; cursor:pointer;}
