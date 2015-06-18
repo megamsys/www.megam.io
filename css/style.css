@@ -1083,3 +1083,89 @@ footer {
     transition: border 0.2s ease-in-out 0s;
 }
 .partners-logo:hover{ background:#c1c9eb ;  border: 1px solid #c1c9eb; cursor:pointer;}
+
+.error-page {
+	padding-top:10px;
+	padding-bottom:50px;
+	position: relative;
+	text-align:center;
+}
+.error-page h2 {
+	color: #66719b;
+    font-size: 11em;
+    line-height: 112px;
+    margin-bottom: 0;
+    margin-top: 35px;
+}
+.error-page h3 {
+	margin-top:0px;
+	margin-bottom:0px;
+	font-size:25px;
+	color:#66719b;
+}
+.error-page p {
+	color: #818181;
+	font-size: 2.5em;
+	font-weight: 400;
+	line-height: 1.6em;
+}
+.error-page img {
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}
+.pagenot-text {
+	background: #fff none repeat scroll 0 0;
+	position: absolute;
+	top: 69px;
+	width: 100%;
+}
+.pagenot-text h3 {
+	color: #818181;
+	font-size: 1.2em;
+	padding: 2px 0;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+/*dated 27-May-2015 starts here */
+
+.launch-app{
+padding-bottom: 80px;
+    padding-top: 80px;
+}
+.launch-app h2{
+	color: #66719b;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;}
+.launch-app p{
+	 color: #818181;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    text-align: justify;
+}
+.launch-app h2 span{ color:#60cc5d;}
+.launch-app a {
+	border: 1px solid #1bb933;
+	background-color: #1bb933;
+	border-radius: 3px;
+	color: #fff;
+	font-size: 20px;
+	padding: 10px 30px;
+	width: 200px;
+	text-align: center;
+	display: block;
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+.launch-app a:hover {
+	background-color: #66719b;
+	border: 1px solid #66719b;
+	color: #FFF;
+	transition: all 1s ease 0s;
+	text-decoration: none;
+}
+	/*dated 27-May-2015 ends here */
+
