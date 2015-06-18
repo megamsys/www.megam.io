@@ -69,37 +69,44 @@
           <li><i class="fa fa-home"></i>Megam Systems (India)</li>
           <li><i class="fa fa-map-marker"></i>Plot no.53, Door No. 2/1075, Second cross, Radha nagar, Perumbakkam, Chennai 100</li>
           <li><i class="fa fa-phone-square"></i>+91-98405-59300</li>
-          <li><i class="fa fa-phone-square"></i>US/Canada : 1-800-618-6813</li>
           <li><i class="fa fa-envelope-o"></i><a href="mailto:info@megam.io">info@megam.io</a></li>
         </ul>
       </div>
-      <!--<div class="col-md-6 col-sm-6">
+      <div class="col-md-6 col-sm-6">
         <ul>
-          <li><i class="fa fa-home"></i>Megam Systems (Canada)</li>
-          <li> <i class="fa fa-phone-square"></i>613-834-4518</li>
+          <li><i class="fa fa-home"></i>Megam Systems (US/Canada)</li>
+          <!--<li><i class="fa fa-map-marker"></i>1806 Arrowgrass way, Ottawa K4A 0c7, Ontario Canada</li>-->
+          <li> <i class="fa fa-phone-square"></i>1-800-618-6813</li>
         </ul>
-      </div>-->
+      </div>
     </div>
     <div class="col-md-5 col-sm-6 row">
       <h2>Contact</h2>
-      <form action="MAILTO:someone@example.com" method="post" enctype="text/plain">
+
+     <div id="contact_form" class="form-style" >
+        <div id="contact_results"></div>
+        <div id="contact_body">
+
+      <form action="MAILTO:info@megam.io" method="post" enctype="text/plain">
+          <div class="form-group col-md-12 ">
+            <input type="text" class="form-control" id="name" name="name" required="true" placeholder="Name">
+          </div>
+          <div class="form-group col-md-6 ">
+            <input type="email" class="form-control" id="email" name="email" required="true" placeholder="Email">
+          </div>
+          <div class="form-group col-md-6 ">
+            <input type="text" class="form-control" id="phone2" name="phone2" required="true" placeholder="Phone Number">
+          </div>
+          <div class="form-group col-md-12 ">
+            <textarea class="form-control" rows="3" name="message" required="true" placeholder="Message"></textarea>
+          </div>
         <div class="form-group col-md-12 ">
-          <input type="text" class="form-control" id="name" placeholder="Name">
-        </div>
-        <div class="form-group col-md-6 ">
-          <input type="email" class="form-control" id="email" placeholder="Email">
-        </div>
-        <div class="form-group col-md-6 ">
-          <input type="text" class="form-control" id="subject" placeholder="Subject">
-        </div>
-        <div class="form-group col-md-12 ">
-          <textarea class="form-control" rows="3" id="message" placeholder="Message"></textarea>
-        </div>
-        <div class="form-group col-md-12 ">
-          <button type="submit" id="sendEmail" class="btn btn-default send col-md-4 col-md-offset-8">Send</button>
+          <button type="submit" id="sendEmail submit_btn" class="btn btn-default send col-md-4 col-md-offset-8">Send</button>
         </div>
       </form>
     </div>
+  </div>
+</div>
   </div>
 </div>
 <div id="map_canvas" style="height:450px;"> </div>
@@ -259,6 +266,62 @@ zoomControlOptions: {
 
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#submit_btn").click(function() { 
+       
+	    var proceed = true;
+        //simple validation at client's end
+        //loop through each field and we simply change border color to red for invalid fields		
+		$("#contact_form input[required=true], #contact_form textarea[required=true]").each(function(){
+			$(this).css('border-color',''); 
+			if(!$.trim($(this).val())){ //if this field is empty 
+				$(this).css('border-color','red'); //change border color to red   
+				proceed = false; //set do not proceed flag
+			}
+			//check invalid email
+			var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/; 
+			if($(this).attr("type")=="email" && !email_reg.test($.trim($(this).val()))){
+				$(this).css('border-color','red'); //change border color to red   
+				proceed = false; //set do not proceed flag				
+			}	
+		});
+       
+        if(proceed) //everything looks good! proceed...
+        {
+			//get input field values data to be sent to server
+            post_data = {
+				'user_name'		: $('input[name=name]').val(), 
+				'user_email'	: $('input[name=email]').val(), 
+				'phone_number'	: $('input[name=phone2]').val(), 
+				'msg'			: $('textarea[name=message]').val()
+			};
+            
+            //Ajax post data to server
+            $.post('contact_me.php', post_data, function(response){  
+				if(response.type == 'error'){ //load json data from server and output message     
+					output = '<div class="error">'+response.text+'</div>';
+				}else{
+				    output = '<div class="success">'+response.text+'</div>';
+					//reset values in all input fields
+					$("#contact_form  input[required=true], #contact_form textarea[required=true]").val(''); 
+					$("#contact_form #contact_body").slideUp(); //hide form after success
+				}
+				$("#contact_form #contact_results").hide()(output).slideDown();
+            }, 'json');
+        }
+    });
+    
+    //reset previously set border colors and hide all message on .keyup()
+    $("#contact_form  input[required=true], #contact_form textarea[required=true]").keyup(function() { 
+        $(this).css('border-color',''); 
+        $("#result").slideUp();
+    });
+});
+</script>
+
+
 </body>
 </html>
 
