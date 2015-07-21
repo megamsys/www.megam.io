@@ -47,7 +47,7 @@
           </li>
           <li><a href="http://docs.megam.io" target="_blank">Documentation </a></li>
           <li><a href="http://devcenter.megam.io" target="_blank">Dev Center</a></li>
-          <li><a href="https://console.megam.io" target="_blank">Try Megam</a></li>
+          <li><a href="https://www.megam.co" target="_blank">Try Megam</a></li>
         </ul>
       </div>
       <!--/.nav-collapse --> 
@@ -108,7 +108,7 @@
 <div id="map_canvas" style="height:450px;"> </div>
 <div class="container support">
   <h2>Got you back, always! 24x7 support. 1-800-618-6813 and support@megam.io</h2>
-  <a href="https://console.megam.io" target="_blank">Try Megam</a> </div>
+  <a href="https://www.megam.co" target="_blank">Try Megam</a> </div>
 <footer>
   <div class="container subscribe"> 
     <!--<div class="row col-md-12">
@@ -140,7 +140,7 @@
             <li><a href="about">Team</a></li>
             <li><a href="contact.php">Contact Us</a></li>
              <li><a href="partners">Partners</a></li>
-            <li><a href="https://console.megam.io" target="_blank">Try Megam</a></li>
+            <li><a href="https://www.megam.co" target="_blank">Try Megam</a></li>
           </ul>
         </div>
       </div>
