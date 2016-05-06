@@ -1,315 +1,306 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="shortcut icon" href="img/favicon.ico" />
-<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-<link rel="stylesheet" href="css/style.css" type="text/css">
-<link rel="stylesheet" href="fonts/font.css" type="text/css">
-<link rel="stylesheet" href="css/graph.css" type="text/css">
-<link href="css/font-awesome.min.css" rel="stylesheet">
-<title>Megam :: Home</title>
+<html lang="en" >
+	<head>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>Megam Version 2.0</title>
 
-<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/responsive.css" rel="stylesheet">
 
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body id="home">
 
-<body>
+		<nav class="navbar inner-menu navbar-default navbar-fixed-top">
+			<div class="pad_lr15 container-fluid">
+				<!-- <div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><img src="images/logo.png"></a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
 
-<!-- Static navbar -->
-<div class="header-menu">
-  <nav class="navbar navbar-default  navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="img-responsive"></a> </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li class="dropdown"><a href="#" class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"> Products <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="cloud-in-a-box.html">Cloud In a Box</a></li>
-               <li role="presentation"><a role="menuitem" tabindex="-1" href="cloud-management-platform.html" >Cloud Management Platform</a></li>
-             <li role="presentation"><a role="menuitem" tabindex="-1" href="meglytics.html"class="login" style="background: none; border: none;border-radius: none; color: #333; font-weight: normal;margin-top: 0px;    padding: 3px 20px;" >Meglytics</a></li>
-            </ul>
-          </li>
-          <li><a href="http://docs.megam.io" target="_blank">Documentation </a></li>
-          <li><a href="http://devcenter.megam.io" target="_blank">Dev Center</a></li>
-          <li><a href="https://console.megam.io" target="_blank">Try Megam</a></li>
-        </ul>
-      </div>
-      <!--/.nav-collapse -->
-    </div>
-  </nav>
-  <div id="graph" class="banner-text">
-    <h2>Logical cloud solutions with Megam</h2>
-    <p>Seamlessly automate infrastructure installation and orchestrate your applications in hybrid cloud</p>
-    <h3><a href="https://console.megam.io" target="_blank" class="sign-up">Signup</a><span><strong>Or</strong></span>Learn more about <b><a href="http://docs.megam.io" target="_blank">Megam</a></b></h3>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="106 94 1168 303" enable-background="new 0 0 1400 600">
-      <g>
-        <line class="ln1" x1="100" y1="0" x2="100" y2="100%" stroke-width="1" stroke="#1c70f0"/>
-        <line class="ln2" x1="200" y1="0" x2="200" y2="100%" stroke-width="1" stroke="#1c70f0"/>
-        <line class="ln3" x1="300" y1="0" x2="300" y2="100%" stroke-width="1" stroke="#1c70f0"/>
-        <line class="ln4" x1="400" y1="0" x2="400" y2="100%" stroke-width="1" stroke="#1c70f0"/>
-        <line class="ln5" x1="500" y1="0" x2="500" y2="100%" stroke-width="1" stroke="#1c70f0"/>
-        <line class="ln6" x1="600" y1="0" x2="600" y2="100%" stroke-width="1" stroke="#1c70f0"/>
-        <line class="ln7" x1="700" y1="0" x2="700" y2="100%" stroke-width="1" stroke="#1c70f0"/>
-        <line class="ln8" x1="800" y1="0" x2="800" y2="100%" stroke-width="1" stroke="#1c70f0"/>
-        <line class="ln9" x1="900" y1="0" x2="900" y2="100%" stroke-width="1" stroke="#1c70f0"/>
-        <line class="ln10" x1="1000" y1="0" x2="1000" y2="100%" stroke-width="1" stroke="#1c70f0"/>
-        <line class="ln11" x1="1100" y1="0" x2="1100" y2="100%" stroke-width="1" stroke="#1c70f0"/>
-        <line class="ln12" x1="1200" y1="0" x2="1200" y2="100%" stroke-width="1" stroke="#1c70f0"/>
-        <line class="ln13" x1="1300" y1="0" x2="1300" y2="100%" stroke-width="1" stroke="#1c70f0"/>
-      </g>
-      <polyline class="animation-draw" fill="none" stroke="#fff" stroke-miterlimit="10"stroke-width="8" points="8,616.5 210.8,380.3 410.8,358.8 610.7,256.8 810.2,227.2
-	1010.2,147.3 1209,127 1407.9,13.7 "/>
-      <circle cx="1216" cy="125px" r="10" class="animation-target wht5" fill="#37426c" stroke-width="7"
-           style="stroke: #FFF;"/>
-      </circle>
-      <circle cx="400px" cy="360px" r="10" class="animation-target wht1" fill="#37426c" stroke-width="7"
-           style="stroke: #FFF;"/>
-      </circle>
-      <circle  cx="215" cy="380" r="10" class="animation-target wht0" fill="#37426c" stroke-width="7"
-         style="stroke: #FFF;"/>
-      </circle>
-      <circle cx="620px" cy="255px" r="10" class="animation-target wht2" fill="#37426c" stroke-width="7"
-           style="stroke: #FFF;"/>
-      </circle>
-      <circle cx="810px" cy="225px" r="10" class="animation-target wht3" fill="#37426c" stroke-width="7"
-           style="stroke: #FFF;"/>
-      </circle>
-      <circle cx="1020px" cy="146px" r="10" class="animation-target wht4" fill="#37426c" stroke-width="7"
-           style="stroke: #FFF;"/>
-      </circle>
-    </svg>
-  </div>
-</div>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">home</a></li>
+						<li><a href="#">products</a></li>
+						<li><a href="#">documentation</a></li>
+						<li><a href="#">login</a></li>
+						<li class="active"><a href="#">signup </a></li>
+					</ul>
+				</div> -->
+				<div class="row ">
+					<div class="col-xs-12">
+						<div class="row">
+							<div class="col-sm-7 col-xs-12 top-nav-left top-nav-com" >
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<a class="navbar-brand" href="index.html"><img src="images/logo.png"></a>
+							</div>
+							<div class="col-sm-5 col-xs-12 top-nav-right top-nav-com" >
+								<div id="navbar" class="navbar-collapse collapse">
+									<ul class="nav navbar-nav navbar-right">
+										<li><a href="index.html">home</a></li>
+										<li><a href="#">products</a></li>
+										<li><a href="http://docs.megam.io">documentation</a></li>
+										<li><a href="https://console.megam.io/signup">login</a></li>
+										<li class="active"><a href="https://console.megam.io/signup">signup </a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</nav>
+		<!-- main menu ends here -->
+		<div class="">
+			<div class="">
+				<div class="col-sm-7 carousel-box carousel-left">
+					<div id="carousel-example-generic" class="car1 carousel slide">
+					  <!-- Indicators -->
+					  <ol class="carousel-indicators">
+					    <li data-target=".car1" data-slide-to="0" class="active"></li>
+					    <li data-target=".car1" data-slide-to="1"></li>
+					  </ol>
 
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner" role="listbox">
+					    <div class="item active">
+					      	<div class="carousel-caption">
+								<h1>You can be on the cloud too.</h1>
+								<p>We help you setup virtual office in cloud. </p><p>Too tired of the cloud jargons, 
+								worry not ! we help you set up your office to accelerate your business needs.</p>
+								
+								<a href="#" class="mar_tb45 btn btn-border btn-oval pull-left">Learn more </a>
+							</div>
+					    </div>
+					    <div class="item">
+					      	<div class="carousel-caption">
+								<h1>Get instant insights with all your data.</h1>
+								<p>Don't let your data get stale, predict to target new customer.</p>
+                                <a href="#" class="mar_tb45 btn btn-border btn-oval pull-left">Learn more </a>
+							</div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+				<div class="col-sm-5 carousel-right carousel-box">
+					
+					<div id="carousel-example-generic" class="car2 carousel slide" data-ride="carousel">
+					  <!-- Indicators -->
+					  <ol class="carousel-indicators">
+					    <li data-target=".car2" data-slide-to="0" class="active"></li>
+					    <li data-target=".car2" data-slide-to="1"></li>
+					  </ol>
 
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner" role="listbox">
+					    <div class="item video-bg-img active">
+					    	
+					      	<div class="carousel-caption">
+								<a href="#" class="playBtn glyphicon glyphicon-play-circle" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/QcXkpZ1-O7Q">
+									<h4 class="mar_tb30"><u>Try Virtual Office Now</u></h4>
+								</a>
+							</div>
+					    </div>
+					    <div class="item video-bg-img">
+					      	<div class="carousel-caption">
+								<a href="#" class="playBtn glyphicon glyphicon-play-circle" data-toggle="modal" data-target="#videoModal"data-theVideo="https://www.youtube.com/embed/QcXkpZ1-O7Q">
+									<h4 class="mar_tb30"><u>Try Virtual Office Now</u></h4>
+								</a>
+								
+							</div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<!-- carousel ends here -->
+		<div class="container pad_tb60" style="clear:both">
+			<div class="row">
+				<h1 class="text-center mar_tb45">Our products</h1>
+				<div class="col-sm-6 prod-left">
+					<div class="prod-left-cover text-center">
+						<img class="img-responsive" src="images/virtual-office.png">
+						<h3 class="text-center mar_tb60">Virtual Office</h3>	
+						<a href="" class="btn btn-success btn-oval">Try Now</a>
+					</div>
+				</div>
+				<div class="col-sm-6 prod-right">
+					<div class="prod-right-cover text-center">
+						<img class="img-responsive" src="images/backup-analysis.png">
+						<h3 class="text-center mar_tb60">Backup & Analytics</h3>	
+						<a href="" class="btn btn-success btn-oval">Try Now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- our products ends here -->
+		<div class="container">
+			<div class="row">
+				<h1 class="text-center pad_b60">Features</h1>
+				<div class="col-xs-12 text-center">
+					<div class="btn-group future-btn-group" role="group" aria-label="...">
+						<button type="button"  id="virtual-office-btn" class="btn-left btn-voffice btn  active">Virtual Office</button>
+						<button type="button" id="backup-btn" class="btn-right btn btn-voffice">Backup Analytics</button>
+					</div>
+				</div>
+				<div class="col-sm-12 virtual-office-tab mar_tb60">
+					<div class="col-sm-4">
+						<div class="prod-right-cover text-center">
+							<img class="" src="images/tab-1.png">
+							<h3 class="text-center mar_tb60">Feature One</h3>	
+							<p>Hassle free installation of all office softwares.</p>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="prod-right-cover text-center">
+							<img class="" src="images/tab-2.png">
+							<h3 class="text-center mar_tb60">Feature Two</h3>	
+							<p>Move everything to cloud.</p>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="prod-right-cover text-center">
+							<img class="" src="images/tab-3.png">
+							<h3 class="text-center mar_tb60">Feature Three</h3>	
+							<p>Get better ROI with minimal cloud expenditures.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 backup-tab mar_tb60">
+					<div class="col-sm-4">
+						<div class="prod-right-cover text-center">
+							<img class="" src="images/tab-3.png">
+							<h3 class="text-center mar_tb60">Feature Four</h3>	
+							<p>Convert your old stale data into business ROI with zero effort. All can be done by just connecting your data to our cloud. Back up on the cloud made easy.</p>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="prod-right-cover text-center">
+							<img class="" src="images/tab-2.png">
+							<h3 class="text-center mar_tb60">Feature Five</h3>	
+							<p>Awesome reports and charts from your data(insights).</p>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="prod-right-cover text-center">
+							<img class="" src="images/tab-1.png">
+							<h3 class="text-center mar_tb60">Feature Six</h3>	
+							<p>Round the clock insights in your palm which helps to explore newer business boundaries.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- tab ends here -->
+		<div class="container">
+			<div class="row">
+				<h1 class="text-center team-title">Talk With Us</h1>
+				<form>
+					<div class="col-sm-6">
+						<div class="form-group">
+							<input type="text" class="form-control" id="" placeholder="NAME">
+						</div>
+						<div class="form-group">
+							<input type="email" class="form-control" id="" placeholder="EMAIL">
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group">
+							<textarea class="form-control" placeholder="MESSAGE" rows="5"></textarea>
+						</div>
+					</div>
+					<div class="col-sm-12 text-center mar_tb60">
+						<input type="submit" name="" class="btn btn-success btn-oval contactBtn" value="Send"> 
+					</div>
+				</form>
+			</div>
+		</div>
+		<hr>
+		<!-- footer starts here -->
+		<div class="container">
+			<div class="row footer-menu">
+				<form class="form-horizontal mar_tb60 newsletter-form">
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-2 control-label">Get Updates</label>
+						<div class="col-sm-6">
+							<input type="email" class="form-control subscribe-input" id="inputEmail3" placeholder="name@domain.com">
+						</div>
+						<div class="col-sm-4">
+							<input type="submit" name="" class="btn btn-success btn-oval" value="Subscribe"> 
+						</div>
+					</div>
+				</form>
 
-<div class="container launch-app">
-<div class="col-md-5 col-sm-6">
-<img src="img/sign-up.png" class="img-responsive">
-</div>
-<div class="col-md-7 col-sm-6">
-<h2>Launch your applications seamlessly 
-with less than <span>$5</span></h2>
-<p>Launching  application, services, microservices and hadoop are just 3-clicks away. Get started right away with the promo code: <b>MEGAMFREE5</b> </p>
- <a href="https://console.megam.io" target="_blank">Try it now</a>
-</div>
-</div>
+				<div class="col-xs-12 col-sm-4 footer-logo">
+					<img class="f_logo" src="images/logo-footer.png">
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<ul class="list-unstyled f_leftMenu">
+						<li><a href="https://virtualoffice.megam.io" target="_blank">Virtual Office</a></li>
+						<li><a href="https://backup.megam.io" target="_blank">Backup Analytics</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<ul class="list-unstyled f_rightMenu">
+						<li><a href="about.html">About</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+						<li><a href="">Devcenter</a></li>
+						<li><a href="">Support</a></li>
+					</ul>
+				</div>
+				
+			</div>
+			<div class="row">
+				<div class="col-sm-12 mar_tb60">
+					<p class="text-center"> © Megam INC 2015  All rights reserved.   Design</p>
+				</div>
+			</div>
+		</div>
 
-<div class="row apps">
-  <div class="col-md-3 col-sm-5 col-md-offset-1 ">
-    <h2>Build, deploy and scale Apps In the cloud</h2>
-    <p>We use open source technology to build an on-premise cloud solutions in minutes(PaaS + IaaS). You can automate and orchestrate the deployment of your apps and services, scale, monitor with continuous integration and rock solid high availability built-in the underlying infrastructure. Also click and launch a Hadoop/Spark stack to see actionable insights. Microservices made easy – Fast deployment of Docker containers to hybrid cloud too. One stop shop for cloud. </p></br></br>
-  </div>
-  <div class="col-md-7 col-sm-7 col-md-offset-1 apps-right">
-    <div class="firefox">
-      <div class="window">
-        <div class="cbutton"></div>
-        <div class="cbutton"></div>
-        <div class="cbutton"></div>
-        <div class="browser-tabs">
-          <div class="browser-tab">
-            <h1>https://www.megam.io</h1>
-          </div>
-        </div>
-      </div>
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-          <div class="item active"> <img src="img/megam-slider1.png" alt="First slide"> </div>
-          <div class="item"> <img src="img/megam-slider2.png" alt="Second slide"> </div>
-          <div class="item"> <img src="img/megam-slider3.png" alt="Third slide"> </div>
-        </div>
-        <!-- <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>-->
-      </div>
-    </div>
-  </div>
-</div>
-<div class="container application">
-  <div class="row ">
-    <div class="col-md-6 col-sm-6"> <img src="img/launch.png" class="img-responsive"> </div>
-    <div class="col-md-6 col-sm-6">
-      <h2>Launch Application</h2>
-      <p>Quickly get your app/service in cloud. We support Rails, Java, Play, Akka, Node.js with integration to Git. Bind a
-      service - PostgreSQL, Riak, Redis, Analytics to your app.</p>
-    </div>
-  </div>
-</div>
-<div class="cloud">
-  <div class="container application">
-    <div class=" row ">
-      <div class="col-md-6 col-sm-6">
-        <h2>Hybrid Cloud</h2>
-        <p>Seamless portability  of your apps and services to multi cloud providers AWS EC2, Google Cloud, Profit Bricks, GoGrid,
-        HP Cloud, on-premise - OpenNebula/OpenStack.</p>
-      </div>
-      <div class="col-md-6 col-sm-6"> <img src="img/hybrid.png" class="img-responsive"> </div>
-    </div>
-  </div>
-</div>
-<div class="container application">
-  <div class="row ">
-    <div class="col-md-6  col-sm-6"> <img src="img/analytics.png" class="img-responsive"> </div>
-    <div class="col-md-6 col-sm-6">
-      <h2>Analytics</h2>
-      <p>Launch an Analytics stack(Hadoop/Spark). Trouble forecasting your sales before a holiday season ? Meglytics can predict the buying behaviour, customer segmentation for you.</p>
-    </div>
-  </div>
-</div>
-<div class="Marketplace">
-  <div class="container">
-    <div class="col-md-4 col-sm-4"> <img src="img/marketplace.png" class="img-responsive">
-      <h2>Apps Marketplace</h2>
-      <p>Plethora of apps and services we support, all in a single click. We support databases, queue, and apps written in Java, Node.js, Play, Ruby. Didn't find your stack, Hey write to us.</p>
-    </div>
-    <div class="col-md-4 col-sm-4"> <img src="img/cont-int.png" class="img-responsive">
-      <h2>Continuous Integration</h2>
-      <p>Commit once and run anywhere. Git works round the clock for you integrating your changes as when it happens and pushed to any notifier (Cloud could be one).</p>
-    </div>
-    <div class="col-md-4 col-sm-4"> <img src="img/analytics-graph.png" class="img-responsive">
-      <h2>Analytics</h2>
-      <p>Launch Hadoop/Spark with machine learning and produce actionable insights. Retail - attract customers with what they like. Energy - predict wind energy from wind speed.  Many more..</p>
-    </div>
-  </div>
-  <div id="accordion">
-    <div id="collapseOne"  class="container panel-collapse collapse">
-      <div class="col-md-4 col-sm-4"> <img src="img/ha.png" class="img-responsive">
-        <h2>High Availability for free</h2>
-        <p>Your stack in our Cloud In a Box never dies. Fault tolerant storage, auto failover your app just runs rock solid  during a failure.</p>
-      </div>
-      <div class="col-md-4 col-sm-4"> <img src="img/monitoring.png" class="img-responsive">
-        <h2>Monitoring</h2>
-        <p>Monitoring your app or service is easy. You get bundled monitoring on every launch. An awesome monitoring dash realtime tells your apps health.</p>
-      </div>
-      <div class="col-md-4 col-sm-4"> <img src="img/micro.png" class="img-responsive">
-        <h2>Micro services(Docker)</h2>
-        <p>Micro service - Docker is easy using an intuitive Visual Designer. Just drag and drop and compose apps + services, you are containers are running</p>
-      </div>
-    </div>
-  </div>
-  <div class="container"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="more-features">More Features</a> </div>
-</div>
-<div class="container support">
-  <h2>Got you back, always! 24x7 support. 1-800-618-6813 and support@megam.io</h2>
-  <a href="https://console.megam.io" target="_blank">Try Megam</a> </div>
-<footer>
-  <div class="container subscribe">
-    <!--<div class="row col-md-12">
-      <div class="col-md-4 col-sm-6 col-md-offset-1">
-        <div class="row">
-          <h2>Sign-up to our newsletter</h2>
-        </div>
-      </div>
-      <div class="col-md-5 col-sm-6">
-        <div class="row">
-          <form class=" form-group">
-            <div class="col-md-6 col-sm-7 row">
-              <input type="email" placeholder="Email address" class="form-control subscribe-input" id="inputEmail">
-            </div>
-            <div class="col-md-6 col-sm-7 row">
-              <input type="submit" value="Subscribe" name="Subscribe" class="subscribe-btn">
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>-->
-  </div>
-  <div class="container footer-bottom">
-    <div class="row col-md-12">
-      <div class="col-md-3 col-sm-3 footer-menu">
-        <div class="row">
-          <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="about.html">Team</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="partners.html">Partners</a></li>
+		<!-- modal for banner -->
+		<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <div class="modal-body">
+		                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		                <div>
+		                    <iframe width="100%" height="350" src=""></iframe>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<!-- Modal ends here-->
 
-            <li><a href="https://console.megam.io" target="_blank">Try Megam</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-3 footer-menu">
-        <div class="row">
-          <ul>
-            <li><a href="cloud-management-platform.html">Cloud Management Platform</a></li>
-            <li><a href="cloud-in-a-box.html">Cloud In a Box</a></li>
-            <li><a href="meglytics.html">Meglytics</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-3 footer-menu">
-        <div class="row">
-          <ul>
-            <li><a href="http://blog.megam.io" target="_blank">Blog</a></li>
-            <li><a href="http://docs.megam.io" target="_blank">Documentation</a></li>
-            <li><a href="http://devcenter.megam.io" target="_blank">Dev center</a></li>
-            <li><a href="http://docs.megam.io/discuss" target="_blank">Support</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-3 social-menu">
-        <div class="row"> <img src="img/logo.png" class="img-responsive">
-          <ul>
-            <li><a href="https://github.com/megamsys" target="_blank" class="github"><i class="fa fa-github"></i></a></li>
-            <li><a href="https://facebook.com/megamsys" target="_blank" class="facebook"><i class="fa fa-facebook"></i> </a></li>
-            <li><a href="https://twitter.com/megamsys" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://plus.google.com/105742854503471299978/about" target="_blank" class="gplus"><i class="fa fa-google-plus"></i></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container ">
-    <div class="copy-right">
-      <div class="row">
-        <div class="col-md-6 col-sm-6">
-          <p> © Megam 2015  All rights reserved.</p>
-        </div>
-        <div class="col-md-4 col-sm-6 col-md-offset-2">
-          <p>Designed with love by <a href="http://enixel.com" target="_blank"> Enixel Digital Agency</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-<script src="js/jquery.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js"></script>
-</body>
+		<!-- features ends here -->
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/custom.js"></script>
+	</body>
 </html>
-
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-60777472-1', 'auto');
-ga('send', 'pageview');
-
-</script>
