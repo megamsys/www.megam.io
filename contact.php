@@ -47,10 +47,10 @@
           </li>
           <li><a href="http://docs.megam.io" target="_blank">Documentation </a></li>
           <li><a href="http://devcenter.megam.io" target="_blank">Dev Center</a></li>
-          <li><a href="https://www.megam.co" target="_blank">Try Megam</a></li>
+          <li><a href="https://console.megamafrica.com" target="_blank">Try Megam</a></li>
         </ul>
       </div>
-      <!--/.nav-collapse --> 
+      <!--/.nav-collapse -->
     </div>
   </nav>
 </div>
@@ -108,9 +108,9 @@
 <div id="map_canvas" style="height:450px;"> </div>
 <div class="container support">
   <h2>Got you back, always! 24x7 support. 1-800-618-6813 and support@megam.io</h2>
-  <a href="https://www.megam.co" target="_blank">Try Megam</a> </div>
+  <a href="https://console.megamafrica.com" target="_blank">Try Megam</a> </div>
 <footer>
-  <div class="container subscribe"> 
+  <div class="container subscribe">
     <!--<div class="row col-md-12">
       <div class="col-md-4 col-sm-6 col-md-offset-1">
         <div class="row">
@@ -129,7 +129,7 @@
           </form>
         </div>
       </div>
-    </div>--> 
+    </div>-->
   </div>
   <div class="container footer-bottom">
     <div class="row col-md-12">
@@ -140,7 +140,7 @@
             <li><a href="about">Team</a></li>
             <li><a href="contact.php">Contact Us</a></li>
              <li><a href="partners">Partners</a></li>
-            <li><a href="https://www.megam.co" target="_blank">Try Megam</a></li>
+            <li><a href="https://console.megamafrica.com" target="_blank">Try Megam</a></li>
           </ul>
         </div>
       </div>
@@ -179,7 +179,7 @@
     <div class="copy-right">
       <div class="row">
         <div class="col-md-6 col-sm-6">
-          <p> © Megam 2015  All rights reserved.</p>
+          <p> © Megam Systems 2016  All rights reserved.</p>
         </div>
         <div class="col-md-4 col-sm-6 col-md-offset-2">
           <p>Designed with love by <a href="http://enixel.com" target="_blank"> Enixel Digital Agency</a></p>
@@ -188,8 +188,8 @@
     </div>
   </div>
 </footer>
-<script src="js/jquery.js" type="text/javascript"></script> 
-<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js"></script>
 <script>
       function initialize() {
   var styles = [
@@ -225,7 +225,7 @@ scrollwheel: false,
     zoomControl: true,
 zoomControlOptions: {
   style: google.maps.ZoomControlStyle.LARGE,
-  
+
 },
     mapTypeControlOptions: {
       mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
@@ -233,7 +233,7 @@ zoomControlOptions: {
   };
   var map = new google.maps.Map(document.getElementById('map_canvas'),
     mapOptions);
-    
+
 	// new google.maps.Marker({ position: new google.maps.LatLng(50.920351, 6.968679), map: map});
 
   map.mapTypes.set('map_style', styledMap);
@@ -241,8 +241,8 @@ zoomControlOptions: {
 
         var image = 'img/marker.png';
 
-      
-        
+
+
         var marker = new google.maps.Marker({
           map: map,
           animation: google.maps.Animation.DROP,
@@ -250,7 +250,7 @@ zoomControlOptions: {
           position: new google.maps.LatLng(12.908768, 80.195775)
         });
         var infowindow = new google.maps.InfoWindow();
-       
+
         google.maps.event.addListener(marker, 'click', function() {
             infowindow.open(map, marker);
         });
@@ -259,56 +259,56 @@ zoomControlOptions: {
       }
 
       google.maps.event.addDomListener(window, 'load', initialize);
-    </script> 
+    </script>
 <script type="text/javascript">
 $(document).ready(function() {
-    $("#submit_btn").click(function() { 
-       
+    $("#submit_btn").click(function() {
+
 	    var proceed = true;
         //simple validation at client's end
-        //loop through each field and we simply change border color to red for invalid fields		
+        //loop through each field and we simply change border color to red for invalid fields
 		$("#contact_form input[required=true], #contact_form textarea[required=true]").each(function(){
-			$(this).css('border-color',''); 
-			if(!$.trim($(this).val())){ //if this field is empty 
-				$(this).css('border-color','red'); //change border color to red   
+			$(this).css('border-color','');
+			if(!$.trim($(this).val())){ //if this field is empty
+				$(this).css('border-color','red'); //change border color to red
 				proceed = false; //set do not proceed flag
 			}
 			//check invalid email
-			var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/; 
+			var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 			if($(this).attr("type")=="email" && !email_reg.test($.trim($(this).val()))){
-				$(this).css('border-color','red'); //change border color to red   
-				proceed = false; //set do not proceed flag				
-			}	
+				$(this).css('border-color','red'); //change border color to red
+				proceed = false; //set do not proceed flag
+			}
 		});
-       
+
         if(proceed) //everything looks good! proceed...
         {
 			//get input field values data to be sent to server
             post_data = {
-				'user_name'		: $('input[name=name]').val(), 
-				'user_email'	: $('input[name=email]').val(), 
-				'phone_number'	: $('input[name=phone2]').val(), 
+				'user_name'		: $('input[name=name]').val(),
+				'user_email'	: $('input[name=email]').val(),
+				'phone_number'	: $('input[name=phone2]').val(),
 				'msg'			: $('textarea[name=message]').val()
 			};
-            
+
             //Ajax post data to server
-            $.post('contact_me.php', post_data, function(response){  
-				if(response.type == 'error'){ //load json data from server and output message     
+            $.post('contact_me.php', post_data, function(response){
+				if(response.type == 'error'){ //load json data from server and output message
 					output = '<div class="error">'+response.text+'</div>';
 				}else{
 				    output = '<div class="success">'+response.text+'</div>';
 					//reset values in all input fields
-					$("#contact_form  input[required=true], #contact_form textarea[required=true]").val(''); 
+					$("#contact_form  input[required=true], #contact_form textarea[required=true]").val('');
 					$("#contact_form #contact_body").slideUp(); //hide form after success
 				}
 				$("#contact_form #contact_results").hide()(output).slideDown();
             }, 'json');
         }
     });
-    
+
     //reset previously set border colors and hide all message on .keyup()
-    $("#contact_form  input[required=true], #contact_form textarea[required=true]").keyup(function() { 
-        $(this).css('border-color',''); 
+    $("#contact_form  input[required=true], #contact_form textarea[required=true]").keyup(function() {
+        $(this).css('border-color','');
         $("#result").slideUp();
     });
 });
