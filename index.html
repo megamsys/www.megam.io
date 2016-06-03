@@ -8,18 +8,72 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 		<title>Megam Version 2.0</title>
-
+     
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 		<link href="css/responsive.css" rel="stylesheet">
-
+	    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
+			<script type="text/javascript">
+		$(document).ready(function() {
+		    $("#submit_btn").click(function() {
+
+			    var proceed = true;
+		        //simple validation at client's end
+		        //loop through each field and we simply change border color to red for invalid fields
+				$("#contact_form input[required=true], #contact_form textarea[required=true]").each(function(){
+					$(this).css('border-color','');
+					if(!$.trim($(this).val())){ //if this field is empty
+						$(this).css('border-color','red'); //change border color to red
+						proceed = false; //set do not proceed flag
+					}
+					//check invalid email
+					var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+					if($(this).attr("type")=="email" && !email_reg.test($.trim($(this).val()))){
+						$(this).css('border-color','red'); //change border color to red
+						proceed = false; //set do not proceed flag
+					}
+				});
+
+
+		        if(proceed) //everything looks good! proceed...
+		        {
+				 //get input field values data to be sent to server
+		         post_data = {
+						'user_name'		: $('input[name=name]').val(),
+						'user_email'	: $('input[name=email]').val(),
+						'msg'			: $('textarea[name=message]').val()
+					};
+					alert(JSON.stringify(post_data));
+		         //Ajax post data to server
+					$.ajax({url: 'contact_me.php',
+         data: post_data,
+         type: 'post',
+   success: function (response) {
+                    alert("Data Saved: " + JSON.stringify(response));
+    				},
+    				error: function (response) {
+                    alert("error: " + JSON.stringify(response));
+    				}
+    				});
+			}
+
+						alert("exited");
+		    });
+
+		    //reset previously set border colors and hide all message on .keyup()
+		    $("#contact_form  input[required=true], #contact_form textarea[required=true]").keyup(function() {
+		        $(this).css('border-color','');
+		        $("#result").slideUp();
+		    });
+		});
+		</script>	
 	</head>
 	<body id="home">
 
@@ -219,7 +273,7 @@
 		<div class="container">
 			<div class="row">
 				<h1 class="text-center team-title">Talk With Us</h1>
-				<form id="submit_btn">
+				<form >
 					<div class="col-sm-6">
 						<div class="form-group">
 							<input type="text" class="form-control" id="name" name="name" placeholder="NAME">
@@ -234,7 +288,7 @@
 						</div>
 					</div>
 					<div class="col-sm-12 text-center mar_tb60">
-						<input type="submit" onclick=function() name="" class="btn btn-success btn-oval contactBtn" value="Send">
+						<input type="submit" id="submit_btn" onclick=function() name="" class="btn btn-success btn-oval contactBtn" value="Send">
 					</div>
 				</form>
 			</div>
@@ -302,56 +356,5 @@
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/custom.js"></script>
-		<script type="text/javascript">
-		$(document).ready(function() {
-		    $("#submit_btn").click(function() {
-
-			    var proceed = true;
-		        //simple validation at client's end
-		        //loop through each field and we simply change border color to red for invalid fields
-				$("#contact_form input[required=true], #contact_form textarea[required=true]").each(function(){
-					$(this).css('border-color','');
-					if(!$.trim($(this).val())){ //if this field is empty
-						$(this).css('border-color','red'); //change border color to red
-						proceed = false; //set do not proceed flag
-					}
-					//check invalid email
-					var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-					if($(this).attr("type")=="email" && !email_reg.test($.trim($(this).val()))){
-						$(this).css('border-color','red'); //change border color to red
-						proceed = false; //set do not proceed flag
-					}
-				});
-
-		        if(proceed) //everything looks good! proceed...
-		        {
-					//get input field values data to be sent to server
-		            post_data = {
-						'user_name'		: $('input[name=name]').val(),
-						'user_email'	: $('input[name=email]').val(),
-						'msg'			: $('textarea[name=message]').val()
-					};
-		            //Ajax post data to server
-		            $.post('contact_me.php', post_data, function(response){
-						if(response.type == 'error'){ //load json data from server and output message
-							output = '<div class="error">'+response.text+'</div>';
-							}else{
-						    output = '<div class="success">'+response.text+'</div>';
-							//reset values in all input fields
-							$("#contact_form  input[required=true], #contact_form textarea[required=true]").val('');
-							$("#contact_form #contact_body").slideUp(); //hide form after success
-						}
-						$("#contact_form #contact_results").hide()(output).slideDown();
-		            }, 'json');
-		        }
-		    });
-
-		    //reset previously set border colors and hide all message on .keyup()
-		    $("#contact_form  input[required=true], #contact_form textarea[required=true]").keyup(function() {
-		        $(this).css('border-color','');
-		        $("#result").slideUp();
-		    });
-		});
-		</script>
 	</body>
 </html>
