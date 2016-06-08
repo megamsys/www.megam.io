@@ -4,7 +4,6 @@ use Mailgun\Mailgun;
 
 function mail($to_email, $subject, $message_body, $headers)
 {
-	echo 'alert("message successfully sent")';
 	//Your credentials
 	$mg = new Mailgun("mailgun-key");
 	$domain = "megambox.com";
