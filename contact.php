@@ -107,7 +107,7 @@
 </div>
 <div id="map_canvas" style="height:450px;"> </div>
 <div class="container support">
-  <h2>Got you back, always! 24x7 support. 1-800-618-6813 and support@megam.io</h2>
+  <h2>Get in touch for a product demo. info@megam.io</h2>
   <a href="https://console.megamafrica.com" target="_blank">Try Megam</a> </div>
 <footer>
   <div class="container subscribe">

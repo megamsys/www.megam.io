@@ -1,26 +1,8 @@
 <?php
-require 'vendor/autoload.php';
-use Mailgun\Mailgun;
 
-function mail($to_email, $subject, $message_body, $headers)
-{
-	//Your credentials
-	$mg = new Mailgun("mailgun-key");
-	$domain = "megambox.com";
-
-	//Customise the email - self explanatory
-	$mg->sendMessage($domain, array(
-	'from'=>'ojamail@megambox.com',
-	'to'=> $to_email,
-	'subject' => $subject,
-	'text' => $message_body
-	    )
-	)
-
-}
 if($_POST)
 {
-	//$to_email   	= "mvijaykanth@megam.io"; //Recipient email, Replace with own email here
+	$to_email   	= "info@megam.io"; //Recipient email, Replace with own email here
 
 	//check if its an ajax request, exit if not
     if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
@@ -35,13 +17,12 @@ if($_POST)
 	//Sanitize input data using PHP filter_var().
 	$user_name		= filter_var($_POST["user_name"], FILTER_SANITIZE_STRING);
 	$user_email		= filter_var($_POST["user_email"], FILTER_SANITIZE_EMAIL);
-	$phone_number	= filter_var($_POST["phone_number"], FILTER_SANITIZE_NUMBER_INT);
 	$message		= filter_var($_POST["msg"], FILTER_SANITIZE_STRING);
 
 
 
 	//email body
-	$message_body = "\r\nName :  ". $user_name."\r\n"."\r\nEmail : ".$user_email."\r\n"."\r\nPhone Number :  ". $phone_number."\r\n"."\r\nMessage :  ". $message."\r\n"."\r\n" ;
+	$message_body = "\r\nName :  ". $user_name."\r\n"."\r\nEmail : ".$user_email."\r\n"."\r\nMessage :  ". $message."\r\n"."\r\n" ;
 
 	//proceed with PHP email.
 	$headers = 'From: '.$user_name.'' . "\r\n" .
