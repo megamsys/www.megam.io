@@ -1,0 +1,12 @@
+[allowlist]
+description = "Project-specific non-secret allowlist"
+paths = [
+  '''^\.git/''',
+  '''^\.next/''',
+  '''^node_modules/''',
+  '''^playwright-report/''',
+  '''^test-results/'''
+]
+regexes = [
+  '''drive\.google\.com/drive/folders/[A-Za-z0-9_-]+\?resourcekey=0-[A-Za-z0-9_-]+(&usp=[A-Za-z_]+)?'''
+]
