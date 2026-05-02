@@ -53,6 +53,6 @@ test.describe("closure site", () => {
 
     await expect(page.getByRole("heading", { name: "Megam / Rio/OS Team" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Downstream / Successor Projects" })).toBeVisible();
-    await expect(page.getByText("not the Megam employee roster")).toBeVisible();
+    await expect(page.getByText("downstream commercial integrator activity")).toBeVisible();
   });
 });
