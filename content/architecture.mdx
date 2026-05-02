@@ -5,10 +5,10 @@ description: Megam v1 and Rio/OS architecture, with period-specific evidence.
 
 # Architecture
 
-Megam's architecture should be read by period. The 2014 OpenNebula deck and the
-later Vertice 1.5 documentation describe related systems, but not the exact same
-stack. The closure site should preserve that difference instead of flattening it
-into a single diagram.
+Megam's architecture changed by period. The 2014 OpenNebula deck and the later
+Vertice 1.5 documentation describe related systems, but not the exact same
+stack. This record keeps those phases separate instead of flattening them into a
+single diagram.
 
 ## Megam v1
 
@@ -39,26 +39,25 @@ clouds, with Java, Play, Ruby on Rails, Node.js, and Akka support.
 
 That same deck includes TOSCA, OpenNebula Chef plugin, private-cloud install,
 and Cloud-in-a-Box material. The deck's named open-source components differ from
-the later Vertice 1.5 docs, so diagrams should label this as the 2014
-OpenNebula-era stack rather than the final v1 stack.
+the later Vertice 1.5 docs, so this was the 2014 OpenNebula-era stack rather
+than the final v1 stack.
 
 ## Rio/OS
 
-Rio/OS should be sourced from `github.com/rioos2` for public evidence. Kishore
-confirmed that the public GitHub organization is a clone or sync of private Rio
-Advancement GitLab work, and that GitLab is not available for public citation.
+Rio/OS public source is represented by `github.com/rioos2`, a public clone or
+sync of Rio Advancement work. The original Rio Advancement GitLab source is not
+available for public citation.
 
 Public Rio/OS repository metadata shows Rust-era work in 2017 and 2018,
-including `metgroup`, `nalperion_rust`, and `openio-sdk-rust`. Later GitHub
-timestamps should not be used as original development dates because they reflect
-synchronization or restoration.
+with primary public links such as `rioos`, `commandcenter`, `autorio`, `aran`,
+`beedi`, and `ottavada`. Supporting repositories such as `metgroup`,
+`nalperion_rust`, and `openio-sdk-rust` are libraries, not the main product
+surface. Later GitHub timestamps reflect synchronization or restoration rather
+than original development dates.
 
-The Rio/OS architecture draft should stay conservative until more archive
-material is available. It can say Rio/OS was the v2 private-cloud operating
-system phase, that it moved toward Rust-era system work, and that the public
-source of record for this site is `github.com/rioos2`. It should not cite
-`rioos-architecture-v2`; Kishore clarified that repo is not a valid source for
-this work.
+Rio/OS was the v2 private-cloud operating-system phase. It moved toward
+Rust-era system work, and the public source of record for this site is
+`github.com/rioos2`.
 
 ## Compared to Kubernetes
 
@@ -72,6 +71,7 @@ Megam v1 was not Kubernetes before Kubernetes. The closest comparison is:
 | Chef cookbooks | images / operators | Chef made early portability practical but later aged differently than image-based deployment. |
 | OpenNebula/OpenVZ/Docker/Ceph substrate | cluster substrate | Megam assumed specific private-cloud building blocks rather than a Kubernetes-native control plane. |
 
-This comparison should be used to orient modern readers, not to claim lineage.
-The site should state what Megam did, where it was early, and where the
-implementation model aged out.
+The comparison orients modern readers; it does not claim lineage. Megam was
+early in private-cloud automation, while parts of its implementation model aged
+out as the industry moved toward declarative, image-based, reconciliation-driven
+systems.
