@@ -8,58 +8,57 @@ description: Megam v1 and Rio/OS architecture, with period-specific evidence.
 Megam's architecture should be read by period. The 2014 OpenNebula deck and the
 later Vertice 1.5 documentation describe related systems, but not the exact same
 stack. The closure site should preserve that difference instead of flattening it
-into a single diagram. [C057]
+into a single diagram.
 
 ## Megam v1
 
 Megam v1 was a control plane for virtual machines, applications, and containers.
 The public docs identified Nilavu as the console UI, the API gateway as the API
-layer, and Vertice as the omni scheduler. [C007] [C011] [C013]
+layer, and Vertice as the omni scheduler.
 
 `verticegateway` was the API server for MegamVertice. Its README places it in
 the Scala era and names NSQ, OpenJDK 8, and Cassandra in the runtime and build
 requirements. It also describes HMAC authorization, PBKDF2 passwords, and a
-master-key model for protected REST resources. [C008] [C009] [C010]
+master-key model for protected REST resources.
 
 `vertice` was the core engine and scheduler. `gulp` was the agent that
 controlled application lifecycle in the cloud. Together, the public repositories
 support a v1 shape of UI, API server, scheduler, message queue, backing store,
-and lifecycle agent. [C011] [C012]
+and lifecycle agent.
 
 The docs and product material place that system on OpenNebula, OpenVZ, Docker,
 and Ceph. That made the system practical for hosting providers and private-cloud
 operators, but also tied it to an infrastructure substrate that later had to be
-explained against Kubernetes-era expectations. [C014]
+explained against Kubernetes-era expectations.
 
 ## The 2014 OpenNebula stack
 
 The OpenNebula deck is the strongest public source for the early architecture.
 It presents Megam as a code-to-cloud system across private, public, and hybrid
-clouds, with Java, Play, Ruby on Rails, Node.js, and Akka support. [C018] [C019]
+clouds, with Java, Play, Ruby on Rails, Node.js, and Akka support.
 
 That same deck includes TOSCA, OpenNebula Chef plugin, private-cloud install,
 and Cloud-in-a-Box material. The deck's named open-source components differ from
 the later Vertice 1.5 docs, so diagrams should label this as the 2014
-OpenNebula-era stack rather than the final v1 stack. [C021] [C057]
+OpenNebula-era stack rather than the final v1 stack.
 
 ## Rio/OS
 
 Rio/OS should be sourced from `github.com/rioos2` for public evidence. Kishore
 confirmed that the public GitHub organization is a clone or sync of private Rio
 Advancement GitLab work, and that GitLab is not available for public citation.
-[C027] [C028]
 
 Public Rio/OS repository metadata shows Rust-era work in 2017 and 2018,
 including `metgroup`, `nalperion_rust`, and `openio-sdk-rust`. Later GitHub
 timestamps should not be used as original development dates because they reflect
-synchronization or restoration. [C029] [C030]
+synchronization or restoration.
 
 The Rio/OS architecture draft should stay conservative until more archive
 material is available. It can say Rio/OS was the v2 private-cloud operating
 system phase, that it moved toward Rust-era system work, and that the public
 source of record for this site is `github.com/rioos2`. It should not cite
 `rioos-architecture-v2`; Kishore clarified that repo is not a valid source for
-this work. [C031]
+this work.
 
 ## Compared to Kubernetes
 
@@ -75,4 +74,4 @@ Megam v1 was not Kubernetes before Kubernetes. The closest comparison is:
 
 This comparison should be used to orient modern readers, not to claim lineage.
 The site should state what Megam did, where it was early, and where the
-implementation model aged out. [C014] [C057]
+implementation model aged out.
