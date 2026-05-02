@@ -1,0 +1,26 @@
+---
+title: Why It Did Not Work
+description: A sourced failure analysis of Megam Systems and Rio/OS.
+---
+
+# Why It Did Not Work
+
+This page should read as a systems failure table, not a memoir. Each row below
+needs one failure sentence and one evidence sentence in the final route.
+
+| Layer | Failure | Evidence |
+|---|---|---|
+| Market | Megam's early bet was cloud management for operators running private and hybrid infrastructure, but the market's center of gravity moved toward Kubernetes-era orchestration and cloud-provider defaults. | Megam's own docs and OpenNebula material show an OpenNebula/OpenVZ/Docker/Ceph and Chef-era product vocabulary. Additional Kubernetes adoption evidence is still needed before this row ships in strong form. [C014] [C021] [C060] |
+| Product | Megam v1 and Rio/OS created two product narratives for one small team: a PaaS/cloud-management platform and then a private-cloud operating system. | Public v1 sources identify Nilavu, Vertice Gateway, Vertice, and Gulp; Rio/OS public metadata shows separate Rust-era work in 2017-2018. [C007] [C008] [C011] [C012] [C029] |
+| Architecture | Megam's imperative, Chef-era control plane was useful in its period but aged differently from declarative, image-based, reconciliation-driven systems. | The 2014 deck includes Chef/OpenNebula/Cloud-in-a-Box material, while later Vertice docs name Cassandra/NSQ-era services. The final architecture page must keep those periods separate. [C021] [C057] |
+| Distribution | Megam had real customers, but the customer base was concentrated in hosting and operator accounts rather than a broad open-source community motion. | Kishore confirmed 12 named Phase 1 customer accounts for public listing. The repo evidence shows public code, but community-growth evidence remains weak. [C038] [C039] |
+| Capital | Rio/OS needed more runway than the company had. | Kishore confirmed that the Rio Advancement acquisition included a seed-funding promise to extend Rio/OS development, and that the funding did not fully materialize. [C046] [C047] |
+| Org | Phase 2 was short and had a harder enterprise shape than Phase 1. | Rio/OS had CogMob as an enterprise pilot and ServerNet as a pilot enterprise customer. Intergrid and DET.io should not be counted as Rio/OS engagements under Kishore's corrected classification. [C041] [C042] [C043] [C061] |
+| Timing | By the time Rio/OS was the new product direction, the industry frame had already shifted away from Megam's original stack. | The 2014 deck anchors Megam's early OpenNebula/Chef/Cloud-in-a-Box direction; Rio/OS public repositories show Rust-era work in 2017-2018. More external market evidence is needed if the final row names Kubernetes adoption directly. [C021] [C029] [C060] |
+| Pivot | The closure event was a decision, not a decay. | In October 2018, after the Rio Advancement funding outcome, the team relocated to Lendsmart / Getattune and active Megam/Rio/OS product development ended. [C047] [C049] |
+
+## Gate 3 Notes
+
+Rows that depend on broad market claims still need either stronger public
+evidence or softer wording before Gate 4. The capital, org, customer, and pivot
+rows are founder-confirmed and can ship if Kishore approves the wording.

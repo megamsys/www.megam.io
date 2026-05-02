@@ -31,3 +31,15 @@ config/secrets.yml
 /vendor/assets/bower_components
 *.bowerrc
 bower.json
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+
+# Playwright
+test-results/
+playwright-report/
+
+# Local OS/editor noise
+.DS_Store
