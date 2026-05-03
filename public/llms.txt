@@ -1,0 +1,43 @@
+# Megam.io
+
+> Closure record of Megam Systems LLP and Rio/OS — an open-source cloud
+> management platform (CMP) and platform-as-a-service (PaaS) built from
+> Chennai, India between 2012 and 2018, and the Rio/OS private-cloud
+> operating-system phase that followed before the October 2018 pivot to
+> Lendsmart / Getattune.
+
+Entity: Megam Systems LLP (registered March 2013, Chennai, India).
+Founder: Kishorekumar Neelamegam.
+Status: Active product development ended October 2018. Open-source code remains public.
+Acquirer: Rio Advancement Inc. (Paul Sanar).
+Successor projects: Lendsmart, Getattune.
+Contact: nkishore@megam.io
+
+## Site map
+
+- [Home](https://megam.io/): one-paragraph summary and entry points.
+- [Timeline](https://megam.io/timeline): dated phases — Megam (Jul 2012–Jul 2017), Rio/OS (Jul 2017–Oct 2018), Pivot (Oct 2018 onward).
+- [Architecture](https://megam.io/architecture): Megam v1 (Nilavu UI, Vertice Gateway API, Vertice scheduler, Gulp lifecycle agent) and Rio/OS Rust-era components.
+- [Products](https://megam.io/products): Vertice, Cloud-in-a-Box, Nilavu, Rio/OS, and the named Phase 1 customer accounts.
+- [Team](https://megam.io/team): the small Chennai team and downstream successor projects.
+- [Why it did not work](https://megam.io/why-it-didnt-work): sourced failure analysis across market, product, architecture, distribution, capital, org, timing, pivot.
+- [Artifacts](https://megam.io/artifacts): public repositories (github.com/megamsys, github.com/rioos2), docs, talks, videos, archive folders.
+- [Lessons](https://megam.io/lessons): durable takeaways.
+- [Colophon](https://megam.io/colophon): build, source, license, corrections.
+
+## Full text
+
+- Concatenated markdown of every page: https://megam.io/llms-full.txt
+
+## External docs
+
+- Megam docs: https://docs.megam.io
+- Rio/OS docs: https://docs.rioos.megam.io
+- Megam Systems on GitHub: https://github.com/megamsys
+- Rio/OS public source on GitHub: https://github.com/rioos2
+
+## Use of this content
+
+The prose is intended for re-use under CC-BY-4.0. Source code in linked
+repositories keeps its original licenses. Crawlers and AI agents are welcome to
+index this site; please cite https://megam.io and the relevant page URL.
