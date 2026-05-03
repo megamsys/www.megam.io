@@ -32,7 +32,7 @@ Contact: nkishore@megam.io
 ## External docs
 
 - Megam docs: https://docs.megam.io
-- Rio/OS docs: https://docs.rioos.megam.io
+- Rio/OS docs: https://rioos.megam.io
 - Megam Systems on GitHub: https://github.com/megamsys
 - Rio/OS public source on GitHub: https://github.com/rioos2
 

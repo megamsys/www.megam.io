@@ -32,7 +32,7 @@ test.describe("closure site", () => {
     );
     await expect(header.getByRole("link", { name: "Rio/OS docs" })).toHaveAttribute(
       "href",
-      "https://docs.rioos.megam.io"
+      "https://rioos.megam.io"
     );
     await expect(page.getByRole("link", { name: /timeline/i }).first()).toHaveAttribute(
       "href",
@@ -51,7 +51,7 @@ test.describe("closure site", () => {
   test("team separates downstream projects", async ({ page }) => {
     await page.goto("/team");
 
-    await expect(page.getByRole("heading", { name: "Megam / Rio/OS Team" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Megam and Rio/OS Team" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Downstream / Successor Projects" })).toBeVisible();
     await expect(page.getByText("downstream commercial integrator activity")).toBeVisible();
   });
