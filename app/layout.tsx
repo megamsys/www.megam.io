@@ -49,7 +49,7 @@ const organizationJsonLd = {
     "https://github.com/megamsys",
     "https://github.com/rioos2",
     "https://docs.megam.io",
-    "https://docs.rioos.megam.io"
+    "https://rioos.megam.io"
   ],
   description:
     "Open-source cloud management platform (CMP) and platform-as-a-service (PaaS) built from Chennai, India. Active product development ended October 2018."
@@ -74,7 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </Link>
           <nav className="docs-nav" aria-label="Documentation links">
             <a href="https://docs.megam.io">Megam docs</a>
-            <a href="https://docs.rioos.megam.io">Rio/OS docs</a>
+            <a href="https://rioos.megam.io">Rio/OS docs</a>
           </nav>
         </header>
         <div className="shell">
