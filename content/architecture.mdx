@@ -13,18 +13,23 @@ single diagram.
 ## Megam v1
 
 Megam v1 was a control plane for virtual machines, applications, and containers.
-The public docs identified Nilavu as the console UI, the API gateway as the API
-layer, and Vertice as the omni scheduler.
+The public docs identified [Nilavu](https://github.com/megamsys/nilavu) as the
+console UI, the API gateway as the API layer, and
+[Vertice](https://github.com/megamsys/vertice) as the omni scheduler.
 
-`verticegateway` was the API server for MegamVertice. Its README places it in
-the Scala era and names NSQ, OpenJDK 8, and Cassandra in the runtime and build
-requirements. It also describes HMAC authorization, PBKDF2 passwords, and a
-master-key model for protected REST resources.
+[`verticegateway`](https://github.com/megamsys/verticegateway) was the API
+server for MegamVertice. Its README places it in the Scala era and names NSQ
+(New Simple Queue, a real-time distributed messaging platform), OpenJDK 8, and
+Cassandra in the runtime and build requirements. It also describes HMAC
+(Hash-based Message Authentication Code) authorization, PBKDF2 (Password-Based
+Key Derivation Function 2) passwords, and a master-key model for protected REST
+(Representational State Transfer) resources.
 
-`vertice` was the core engine and scheduler. `gulp` was the agent that
-controlled application lifecycle in the cloud. Together, the public repositories
-support a v1 shape of UI, API server, scheduler, message queue, backing store,
-and lifecycle agent.
+[`vertice`](https://github.com/megamsys/vertice) was the core engine and
+scheduler. [`gulp`](https://github.com/megamsys/gulp) was the agent that
+controlled application lifecycle in the cloud. Together, the public
+repositories support a v1 shape of UI, API server, scheduler, message queue,
+backing store, and lifecycle agent.
 
 The docs and product material place that system on OpenNebula, OpenVZ, Docker,
 and Ceph. That made the system practical for hosting providers and private-cloud
@@ -37,8 +42,9 @@ The OpenNebula deck captures the early architecture best. It presents Megam as a
 code-to-cloud system across private, public, and hybrid clouds, with Java,
 Play, Ruby on Rails, Node.js, and Akka support.
 
-That same deck includes TOSCA, OpenNebula Chef plugin, private-cloud install,
-and Cloud-in-a-Box material. The deck's named open-source components differ from
+That same deck includes TOSCA (Topology and Orchestration Specification for
+Cloud Applications, an OASIS standard for describing cloud workloads),
+OpenNebula Chef plugin, private-cloud install, and Cloud-in-a-Box material. The deck's named open-source components differ from
 the later Vertice 1.5 docs, so this was the 2014 OpenNebula-era stack rather
 than the final v1 stack.
 

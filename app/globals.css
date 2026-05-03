@@ -288,6 +288,42 @@ a:focus-visible {
   text-transform: uppercase;
 }
 
+.site-footer {
+  border-top: 1px solid var(--rule-faint);
+  background: rgba(10, 10, 15, 0.82);
+  padding: 32px;
+}
+
+.site-footer-inner {
+  width: min(1280px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--size-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.site-footer-inner .entity {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.site-footer-inner .postal {
+  margin: 0;
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.site-footer-inner .meta {
+  margin: 0;
+}
+
 .not-found {
   display: grid;
   min-height: 100vh;
