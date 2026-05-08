@@ -217,7 +217,8 @@ a:focus-visible {
   animation: enter var(--dur-slow) var(--ease-out);
 }
 
-.content-page > * {
+.content-page > *,
+.content-page > .markdown-passthrough > * {
   grid-column: 2 / span 7;
 }
 
