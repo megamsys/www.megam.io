@@ -320,11 +320,12 @@ a:focus-visible {
 }
 
 .still-building {
-  margin: 8px 0 32px;
+  margin: 8px 0 40px;
   padding: 18px 20px;
+  border-left: 2px solid var(--accent-primary);
   border-top: 1px solid var(--rule-faint);
   border-bottom: 1px solid var(--rule-faint);
-  background: rgba(0, 229, 255, 0.025);
+  background: rgba(0, 229, 255, 0.04);
 }
 
 .still-building-eyebrow {
