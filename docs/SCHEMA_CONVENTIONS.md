@@ -1,1 +1,0 @@
-/Users/kishore/Projects/dotfiles/docs/SCHEMA_CONVENTIONS.md

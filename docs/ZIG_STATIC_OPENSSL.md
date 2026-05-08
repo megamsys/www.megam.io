@@ -1,1 +1,0 @@
-/Users/kishore/Projects/dotfiles/docs/ZIG_STATIC_OPENSSL.md

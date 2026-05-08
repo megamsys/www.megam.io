@@ -1,1 +1,0 @@
-/Users/kishore/Projects/dotfiles/docs/REST_API_DESIGN_GUIDELINES.md

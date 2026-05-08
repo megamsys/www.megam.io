@@ -1,1 +1,0 @@
-/Users/kishore/Projects/dotfiles/AGENTS_INVARIANCE.md
