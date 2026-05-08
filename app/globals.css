@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=JetBrains+Mono:wght@400;500&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap");
+
 :root {
   --canvas: #0a0a0f;
   --canvas-elevated: #11131a;
@@ -5,26 +8,23 @@
   --text-secondary: rgba(255, 255, 255, 0.6);
   --text-muted: rgba(255, 255, 255, 0.45);
   --accent-cyan: #00e5ff;
-  --accent-green: #a6ff00;
-  --accent-magenta: #ff2d95;
   --accent-primary: var(--accent-cyan);
-  --accent-secondary: var(--accent-magenta);
   --glow-primary: 0 0 32px rgba(0, 229, 255, 0.35);
-  --glow-strong: 0 0 48px rgba(0, 229, 255, 0.5);
   --rule-faint: rgba(0, 229, 255, 0.2);
   --rule-strong: rgba(0, 229, 255, 0.6);
-  --font-display: "Space Grotesk", system-ui, sans-serif;
-  --font-body: Inter, system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "General Sans", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace;
   --size-hero: clamp(40px, 6vw, 88px);
   --size-h1: clamp(32px, 4vw, 56px);
   --size-h2: clamp(24px, 2.5vw, 36px);
   --size-h3: clamp(20px, 2vw, 28px);
+  --size-h4: clamp(17px, 1.5vw, 22px);
   --size-body: clamp(15px, 1.1vw, 18px);
   --size-small: clamp(13px, 0.9vw, 14px);
   --size-meta: 12px;
-  --tracking-hero: -0.04em;
-  --tracking-h1: -0.02em;
+  --tracking-hero: -0.02em;
+  --tracking-h1: -0.015em;
   --tracking-body: 0;
   --tracking-meta: 0.12em;
   --leading-tight: 1.05;
@@ -52,7 +52,7 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 42% 16%, rgba(0, 229, 255, 0.12), transparent 34rem),
+    radial-gradient(circle at 42% 16%, rgba(0, 229, 255, 0.04), transparent 34rem),
     var(--canvas);
   background-color: var(--canvas);
   color: var(--text-primary);
@@ -60,6 +60,7 @@ body {
   font-size: var(--size-body);
   line-height: var(--leading-body);
   letter-spacing: var(--tracking-body);
+  font-optical-sizing: auto;
 }
 
 body::before {
@@ -88,6 +89,9 @@ a {
 a:hover {
   color: var(--accent-primary);
   text-decoration-color: var(--accent-primary);
+}
+
+a.glow-link:hover {
   text-shadow: var(--glow-primary);
 }
 
@@ -145,6 +149,27 @@ a:focus-visible {
   align-items: center;
 }
 
+.header-nav-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.active-nav .nav-label {
+  color: var(--text-muted);
+}
+
+.active-nav a {
+  color: var(--accent-primary);
+}
+
+.nav-divider {
+  width: 1px;
+  height: 14px;
+  background: var(--rule-faint);
+}
+
 .shell {
   display: grid;
   grid-template-columns: minmax(190px, 260px) minmax(0, 1fr);
@@ -196,11 +221,16 @@ a:focus-visible {
   grid-column: 2 / span 7;
 }
 
+.markdown-passthrough {
+  display: contents;
+}
+
 .content-page h1,
 .content-page h2,
 .content-page h3,
 .content-page h4 {
   font-family: var(--font-display);
+  font-weight: 500;
   line-height: var(--leading-tight);
   letter-spacing: var(--tracking-h1);
 }
@@ -208,12 +238,19 @@ a:focus-visible {
 .content-page h1 {
   margin: 0 0 40px;
   font-size: var(--size-h1);
+  font-weight: 600;
+}
+
+.content-page h4 {
+  margin: 32px 0 10px;
+  font-size: var(--size-h4);
 }
 
 .home-page h1 {
   grid-column: 2 / span 10;
   margin-block-end: 32px;
   font-size: var(--size-hero);
+  font-weight: 600;
   letter-spacing: var(--tracking-hero);
 }
 
@@ -279,6 +316,50 @@ a:focus-visible {
 .page-team h3 {
   padding-left: 20px;
   border-left: 2px solid var(--accent-primary);
+}
+
+.still-building {
+  margin: 8px 0 32px;
+  padding: 18px 20px;
+  border-top: 1px solid var(--rule-faint);
+  border-bottom: 1px solid var(--rule-faint);
+  background: rgba(0, 229, 255, 0.025);
+}
+
+.still-building-eyebrow {
+  margin: 0 0 10px;
+  font-family: var(--font-mono);
+  font-size: var(--size-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+  color: var(--accent-primary);
+}
+
+.still-building-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+}
+
+.still-building-list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: baseline;
+  font-size: var(--size-small);
+}
+
+.still-building-list a {
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+  color: var(--accent-primary);
+  text-decoration-color: var(--rule-faint);
+}
+
+.still-building-list span {
+  color: var(--text-secondary);
 }
 
 .page-why-it-didnt-work table td:first-child {

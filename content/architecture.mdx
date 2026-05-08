@@ -1,6 +1,6 @@
 ---
 title: Architecture
-description: Megam v1 and Rio/OS architecture, with period-specific evidence.
+description: Megam Vertice (the v1 product) and Rio/OS architecture, with period-specific evidence.
 ---
 
 # Architecture
@@ -10,9 +10,9 @@ Vertice 1.5 documentation describe related systems, but not the exact same
 stack. This record keeps those phases separate instead of flattening them into a
 single diagram.
 
-## Megam v1
+## Megam Vertice (v1)
 
-Megam v1 was a control plane for virtual machines, applications, and containers.
+Megam Vertice was the v1 product. It was a control plane for virtual machines, applications, and containers.
 The public docs identified [Nilavu](https://github.com/megamsys/nilavu) as the
 console UI, the API gateway as the API layer, and
 [Vertice](https://github.com/megamsys/vertice) as the omni scheduler.
@@ -58,9 +58,9 @@ Rust-era system model and away from the earlier Megam control-plane shape.
 
 ## Compared to Kubernetes
 
-Megam v1 was not Kubernetes before Kubernetes. The closest comparison is:
+Megam Vertice (v1) was not Kubernetes before Kubernetes. The closest comparison is:
 
-| Megam v1 | Kubernetes-era equivalent | Difference |
+| Megam Vertice (v1) | Kubernetes-era equivalent | Difference |
 |---|---|---|
 | `verticegateway` | `kube-apiserver` | Both exposed an API and auth boundary, but Megam's state and object model were its own. |
 | `vertice` | scheduler / controller-manager territory | Megam's scheduler was more imperative and product-specific. |

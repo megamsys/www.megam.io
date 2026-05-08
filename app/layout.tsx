@@ -69,13 +69,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
         <header className="site-header" aria-label="Site header">
-          <Link className="wordmark" href="/">
+          <Link className="wordmark glow-link" href="/">
             megam.io -&gt; closed
           </Link>
-          <nav className="docs-nav" aria-label="Documentation links">
-            <a href="https://docs.megam.io">Megam docs</a>
-            <a href="https://rioos.megam.io">Rio/OS docs</a>
-          </nav>
+          <div className="header-nav-group">
+            <nav className="docs-nav active-nav" aria-label="Active projects">
+              <span className="nav-label">Active</span>
+              <a href="https://cachekit.org">cachekit</a>
+              <a href="https://usezombie.com">usezombie</a>
+            </nav>
+            <span className="nav-divider" aria-hidden="true" />
+            <nav className="docs-nav" aria-label="Closed-project documentation">
+              <a href="https://docs.megam.io">Megam docs</a>
+              <a href="https://rioos.megam.io">Rio/OS docs</a>
+            </nav>
+          </div>
         </header>
         <div className="shell">
           <aside className="side-nav" aria-label="Primary navigation">
