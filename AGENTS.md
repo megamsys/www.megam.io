@@ -1,0 +1,1 @@
+/Users/kishore/Projects/dotfiles/AGENTS.md
