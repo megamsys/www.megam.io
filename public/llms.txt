@@ -17,7 +17,7 @@ Contact: nkishore@megam.io
 
 - [Home](https://megam.io/): one-paragraph summary and entry points.
 - [Timeline](https://megam.io/timeline): dated phases — Megam (Jul 2012–Jul 2017), Rio/OS (Jul 2017–Oct 2018), Pivot (Oct 2018 onward).
-- [Architecture](https://megam.io/architecture): Megam v1 (Nilavu UI, Vertice Gateway API, Vertice scheduler, Gulp lifecycle agent) and Rio/OS Rust-era components.
+- [Architecture](https://megam.io/architecture): Megam Vertice (the v1 product — Nilavu UI, Vertice Gateway API, Vertice scheduler, Gulp lifecycle agent) and Rio/OS Rust-era components.
 - [Products](https://megam.io/products): Vertice, Cloud-in-a-Box, Nilavu, Rio/OS, and the named Phase 1 customer accounts.
 - [Team](https://megam.io/team): the small Chennai team and downstream successor projects.
 - [Why it did not work](https://megam.io/why-it-didnt-work): sourced failure analysis across market, product, architecture, distribution, capital, org, timing, pivot.
