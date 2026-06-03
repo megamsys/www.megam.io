@@ -1,7 +1,7 @@
 # Megam.io Closure Site Claims Ledger
 
 Gate: 2
-Last updated: May 02, 2026
+Last updated: Jun 03, 2026
 
 Status meanings:
 
@@ -73,3 +73,15 @@ Status meanings:
 | C059 | Founder-provided team rows that remain pending in `TEAM_REVIEW.md` can be drafted for QA but should not ship publicly until approved. | founder-confirmed | Kishore confirmation, May 02, 2026; `TEAM_REVIEW.md` | yes for internal draft | `/team` |
 | C060 | Market/Kubernetes adoption claims need additional public evidence if the final failure row remains specific. | needs-review | `RED_FLAGS.md` R010 | no until resolved | `/why-it-didnt-work` |
 | C061 | Rio/OS Phase 2 had ServerNet as a pilot enterprise customer. | founder-confirmed | Kishore correction, May 02, 2026 | yes | `/products`, `/timeline` |
+| C062 | Kishorekumar Neelamegam left a corporate job in 2012 to start Megam, at around age 39. (Megam Systems spanned 2012-2018; Phase 1 Megam product 2012-2017, Rio/OS 2017-2018.) | founder-confirmed | Founder account, Jun 01, 2026 | yes | `/timeline` |
+| C063 | Megam was bootstrapped on roughly INR 1 to 1.5 crore of the founder's own capital over five to six years. | founder-confirmed | Founder account, Jun 01, 2026 | yes | `/timeline` |
+| C064 | Megam customers paid about $20 per host, with at least four hosts each, and more accounts were in the pipeline. | founder-confirmed | Founder account, Jun 01, 2026 | yes | `/products`, `/timeline`, `/why-it-didnt-work` |
+| C065 | Megam had three funding offers (about $150K Philippine, $250K Indian, $125K Australian); it bet on the Philippine offer met at RISE Hong Kong, set aside the other two, waited about five months, and the deal never closed. Treated as a Megam-era event distinct from the 2018 Rio Advancement seed promise. | founder-confirmed | Founder account, Jun 01, 2026 | yes | `/timeline`, `/why-it-didnt-work`, `/lessons` |
+| C066 | During the five-month wait, the team built a v2 and a Sisense-style analytics product instead of selling. | founder-confirmed | Founder account, Jun 01, 2026 | yes | `/timeline`, `/lessons` |
+| C067 | The family's finances stretching was the trigger to pivot. | founder-confirmed | Founder account, Jun 01, 2026 | yes | `/timeline` |
+| C068 | After Megam, the founder pitched datacenters in India, Hong Kong, and the US, and met AK Patel of Motive Partners by pitching Megam v2 for enterprise compliance (desktop-as-a-service, auto-triggered antivirus, automated patching). | founder-confirmed | Founder account, Jun 01, 2026 | yes | `/timeline` |
+| C069 | AK Patel recruited Kishore to co-found Lendsmart on the US homebuyer-closing problem; focused on community banks; co-founded Getattune with AK Patel and Gem George; scaled to 10 banks; raised a seed of about $2.25M. | founder-confirmed | Founder account, Jun 01, 2026 | yes | `/timeline` |
+| C070 | Kishore later moved to e2enetworks, framed as a continuation of the Megam mission in the Indian space. | founder-confirmed | Founder account, Jun 01, 2026 | yes | `/timeline` |
+| C071 | The recurring "who is the customer" gap was unanswered early at Megam and answered at Lendsmart via community banks. | founder-confirmed | Founder account, Jun 01, 2026 | yes | `/timeline`, `/lessons`, `/why-it-didnt-work` |
+| C072 | Additional Megam engineers confirmed via `@megam.io` commit emails / GitHub org membership: Arunkumar Sekar (arunkumarsekar06), Saravanan (saravanan-megam), Thilip Kumar (thilipkumar), Subash Sethurajan (subashsethurajan), Dhanush Ganth (dhanushganth). | verified | GitHub commit metadata; org sweep, Jun 03, 2026 | yes | `/team` |
+| C073 | Boopathi Peramachi was a Megam software developer; no GitHub footprint, LinkedIn provided by founder. | founder-confirmed | Kishore confirmation + LinkedIn URL, Jun 03, 2026; ZoomInfo employment record | yes | `/team` |

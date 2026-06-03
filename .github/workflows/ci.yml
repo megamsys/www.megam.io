@@ -17,6 +17,14 @@ concurrency:
 jobs:
   lint-build-e2e:
     runs-on: ubuntu-latest
+    # Run inside Playwright's official image: Chromium and its system libraries
+    # are preinstalled and pre-extracted, so we skip the `playwright install`
+    # download+extract step that reliably stalled ~3 min on the bare runner
+    # (Chrome downloaded to 100% in ~1s, then hung before extraction every run).
+    # Pin this tag to the @playwright/test version in package.json (1.59.1) —
+    # bump both together.
+    container:
+      image: mcr.microsoft.com/playwright:v1.59.1-noble
     steps:
       - uses: actions/checkout@v6
 
@@ -33,9 +41,6 @@ jobs:
 
       - name: Build site
         run: npm run build
-
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps chromium
 
       - name: Run e2e tests
         run: npm run test:e2e
