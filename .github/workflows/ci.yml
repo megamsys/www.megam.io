@@ -45,15 +45,14 @@ jobs:
           path: ~/.cache/ms-playwright
           key: pw-${{ runner.os }}-${{ steps.pw.outputs.v }}
 
-      # On a cache hit the browser binaries are already present; skip the
-      # ~150MB download and the apt `--with-deps` step (the slow/flaky part).
+      # Download the Chromium binary only (no `--with-deps`): the apt step it
+      # runs reliably stalls on the runner's dpkg lock, and ubuntu-latest
+      # already ships Chromium's system libraries (Chrome is preinstalled).
+      # On a cache hit this is a fast no-op. timeout-minutes bounds any future
+      # download stall so the job fails fast instead of hanging.
       - name: Install Playwright browsers
-        run: |
-          if [ "${{ steps.pw-cache.outputs.cache-hit }}" = "true" ]; then
-            npx playwright install chromium
-          else
-            npx playwright install --with-deps chromium
-          fi
+        run: npx playwright install chromium
+        timeout-minutes: 5
 
       - name: Run e2e tests
         run: npm run test:e2e
