@@ -45,14 +45,25 @@ jobs:
           path: ~/.cache/ms-playwright
           key: pw-${{ runner.os }}-${{ steps.pw.outputs.v }}
 
-      # Download the Chromium binary only (no `--with-deps`): the apt step it
-      # runs reliably stalls on the runner's dpkg lock, and ubuntu-latest
-      # already ships Chromium's system libraries (Chrome is preinstalled).
-      # On a cache hit this is a fast no-op. timeout-minutes bounds any future
-      # download stall so the job fails fast instead of hanging.
+      # No `--with-deps`: ubuntu-latest already ships Chromium's system
+      # libraries (Chrome is preinstalled), and the apt step it runs stalls on
+      # the dpkg lock. The browser download itself intermittently hangs while
+      # opening the connection for a secondary artifact (headless shell / ffmpeg)
+      # with no output, so bound each attempt with `timeout` and retry — a fresh
+      # connection clears the stall. On a cache hit the first attempt is a fast
+      # no-op.
       - name: Install Playwright browsers
-        run: npx playwright install chromium
-        timeout-minutes: 5
+        run: |
+          for attempt in 1 2 3; do
+            echo "::group::playwright install (attempt $attempt)"
+            timeout 180 npx playwright install chromium && { echo "::endgroup::"; exit 0; }
+            echo "::endgroup::"
+            echo "attempt $attempt stalled or failed; retrying"
+            sleep 5
+          done
+          echo "playwright install failed after 3 attempts" >&2
+          exit 1
+        timeout-minutes: 12
 
       - name: Run e2e tests
         run: npm run test:e2e
