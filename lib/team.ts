@@ -50,6 +50,12 @@ const team: TeamPerson[] = [
   },
   { name: "Logesh Eswar", jobTitle: "Software Engineer", sameAs: ["https://github.com/LogeshEswar"] },
   { name: "Balaji Sekar", jobTitle: "Software Engineer", sameAs: ["https://github.com/balajisek"] },
+  { name: "Arunkumar Sekar", jobTitle: "Software Engineer", sameAs: ["https://github.com/arunkumarsekar06"] },
+  { name: "Saravanan", jobTitle: "Software Engineer", sameAs: ["https://github.com/saravanan-megam"] },
+  { name: "Subash Sethurajan", jobTitle: "Software Engineer", sameAs: ["https://github.com/subashsethurajan"] },
+  { name: "Thilip Kumar", jobTitle: "Software Engineer", sameAs: ["https://github.com/thilipkumar"] },
+  { name: "Dhanush Ganth", jobTitle: "Software Engineer", sameAs: ["https://github.com/dhanushganth"] },
+  { name: "Boopathi Peramachi", jobTitle: "Software Developer", sameAs: ["https://in.linkedin.com/in/boopathi-peramachi-78ba0a193"] },
   {
     name: "Jonathan Philipos",
     jobTitle: "Founder, DET.io / VirtEngine (downstream commercial integrator and Megam partner)",

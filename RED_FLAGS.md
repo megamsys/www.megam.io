@@ -1,7 +1,7 @@
 # Megam.io Red Flags
 
 Gate: 2
-Last updated: May 02, 2026
+Last updated: Jun 03, 2026
 
 This file tracks contradictions, weak evidence, and launch risks. Items can be
 closed by stronger evidence, founder signoff, or removal from public prose.
@@ -23,6 +23,7 @@ closed by stronger evidence, founder signoff, or removal from public prose.
 | R011 | Existing headshots are approved but not fully mapped for all team members. | `/team` may look inconsistent. | Use approved available images during QA; initials/no image for missing entries. | implementation agent |
 | R012 | Legacy logo direction is intentionally restrained. | User may expect visible logo use because `Branding/` was provided. | Use logo as archival artifact and color source; primary identity remains wordmark unless Gate 4 changes it. | Kishore / design QA |
 | R013 | DET.io classification was corrected by Kishore after the original prompt draft. | Future edits could accidentally restore stale Rio/OS-partner language. | Canonical wording: DET.io was associated with Megam only, as a Megam partner, not a customer and not a Rio/OS partner. Prompt and content have been updated. | closed for Gate 4 |
+| R016 | Boopathi Peramachi has no GitHub footprint in either org; ZoomInfo is the only third-party role evidence. | Aggregator-only role evidence absent a code trail. | LinkedIn provided directly by Kishore (Jun 03, 2026): https://in.linkedin.com/in/boopathi-peramachi-78ba0a193. Listed with LinkedIn only, no GitHub link. Spelling corrected to "Peramachi". | closed for this change |
 
 ## Closed or Resolved for Gate 2
 
